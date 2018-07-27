@@ -14,6 +14,8 @@
 @property (nonatomic,copy) NSString *intro;
 
 - (instancetype)initWithDict:(NSDictionary*)dict;
++ (instancetype)heroWithDict:(NSDictionary*)dict;
 
++(NSArray*)heros;
 
 @end
