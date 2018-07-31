@@ -56,7 +56,7 @@
     self.tableView.tableFooterView = foot;
     
     
-    self.tableView.rowHeight = 140;
+//    self.tableView.rowHeight = 140;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor redColor];
     [self.view addSubview:self.tableView];
@@ -142,6 +142,7 @@
 {
     NSLog(@"%s",__func__);
 }
+
 
 //! cancel select one row.
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
