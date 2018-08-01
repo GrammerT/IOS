@@ -53,8 +53,14 @@
 //! cell被选中或者取消选中都会调用
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    if(selected)
+    {
+        self.contentView.backgroundColor = [UIColor redColor];
+    }
+    else
+    {
+        self.contentView.backgroundColor = [UIColor greenColor];
+    }
 }
 
 @end

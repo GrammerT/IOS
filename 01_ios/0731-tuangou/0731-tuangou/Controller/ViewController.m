@@ -61,7 +61,9 @@
     TuanGou *t_tg = [TuanGou tgWithDict:dict];
     [self.tgs addObject:t_tg];
     //! 刷新数据
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:self.tgs.count-1 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
 
@@ -72,6 +74,9 @@
     cell.tg = tg;
     return cell;
 }
+
+
+
 
 //- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 //{
