@@ -26,7 +26,7 @@
     return [[self alloc] initWithDict:dict];
 }
 
-+ (NSArray*) tgs
++ (NSMutableArray*) tgs
 {
     NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tgs.plist" ofType:nil]];
     

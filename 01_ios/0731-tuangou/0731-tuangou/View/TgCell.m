@@ -21,6 +21,20 @@
 
 @implementation TgCell
 
++ (instancetype)cellWithTableVie:(UITableView*)tableView
+{
+    static NSString *ID = @"cell";
+    TgCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if(cell==nil)
+    {
+        //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        //        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        //! load ui from xib file
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"TgCell" owner:nil options:nil] lastObject];
+    }
+    return cell;
+}
+
 
 - (void)setTg:(TuanGou*)ttg
 {
@@ -36,6 +50,7 @@
     // Initialization code
 }
 
+//! cell被选中或者取消选中都会调用
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

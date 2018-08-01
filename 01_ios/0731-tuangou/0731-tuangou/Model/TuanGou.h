@@ -17,6 +17,6 @@
 - (instancetype)initWithDict:(NSDictionary*)dict;
 + (instancetype)tgWithDict:(NSDictionary*)dict;
 
-+ (NSArray*) tgs;
++ (NSMutableArray*) tgs;
 
 @end

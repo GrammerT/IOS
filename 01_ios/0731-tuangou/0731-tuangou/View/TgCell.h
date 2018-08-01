@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TgCell.h
 //  0731-tuangou
 //
 //  Created by Grammer on 2018/7/31.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TuanGou;
+@interface TgCell : UITableViewCell
 
-@interface ViewController : UITableViewController
+@property (nonatomic,strong) TuanGou *tg;
 
-//! quickly build class function.
+
 + (instancetype)cellWithTableVie:(UITableView*)tableView;
 @end
-

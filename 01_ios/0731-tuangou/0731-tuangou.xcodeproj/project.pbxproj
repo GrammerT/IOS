@@ -19,6 +19,8 @@
 		AEE050B02110A282006AAE30 /* TuanGou.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE050AF2110A282006AAE30 /* TuanGou.m */; };
 		AEE050B22110AADF006AAE30 /* TgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE050B12110AADF006AAE30 /* TgCell.xib */; };
 		AEE050B52110ACD1006AAE30 /* TgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE050B42110ACD1006AAE30 /* TgCell.m */; };
+		AEE050BA2111D941006AAE30 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE050B92111D941006AAE30 /* FooterView.xib */; };
+		AEE050BD2111D9DD006AAE30 /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE050BC2111D9DD006AAE30 /* FooterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		AEE050B12110AADF006AAE30 /* TgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TgCell.xib; sourceTree = "<group>"; };
 		AEE050B32110ACD1006AAE30 /* TgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgCell.h; sourceTree = "<group>"; };
 		AEE050B42110ACD1006AAE30 /* TgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TgCell.m; sourceTree = "<group>"; };
+		AEE050B92111D941006AAE30 /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		AEE050BB2111D9DD006AAE30 /* FooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooterView.h; sourceTree = "<group>"; };
+		AEE050BC2111D9DD006AAE30 /* FooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,19 +118,15 @@
 			children = (
 				AEE0507A2110A192006AAE30 /* AppDelegate.h */,
 				AEE0507B2110A192006AAE30 /* AppDelegate.m */,
-				AEE0507D2110A192006AAE30 /* ViewController.h */,
-				AEE0507E2110A192006AAE30 /* ViewController.m */,
-				AEE050B12110AADF006AAE30 /* TgCell.xib */,
-				AEE050B32110ACD1006AAE30 /* TgCell.h */,
-				AEE050B42110ACD1006AAE30 /* TgCell.m */,
+				AEE050B62110B6A8006AAE30 /* Controller */,
+				AEE050B72110B6B8006AAE30 /* View */,
 				AEE050802110A192006AAE30 /* Main.storyboard */,
 				AEE050832110A195006AAE30 /* Assets.xcassets */,
 				AEE050852110A195006AAE30 /* LaunchScreen.storyboard */,
 				AEE050AC2110A23C006AAE30 /* tgs.plist */,
 				AEE050882110A195006AAE30 /* Info.plist */,
 				AEE050892110A195006AAE30 /* main.m */,
-				AEE050AE2110A282006AAE30 /* TuanGou.h */,
-				AEE050AF2110A282006AAE30 /* TuanGou.m */,
+				AEE050B82110B6E1006AAE30 /* Model */,
 			);
 			path = "0731-tuangou";
 			sourceTree = "<group>";
@@ -146,6 +147,37 @@
 				AEE050A02110A196006AAE30 /* Info.plist */,
 			);
 			path = "0731-tuangouUITests";
+			sourceTree = "<group>";
+		};
+		AEE050B62110B6A8006AAE30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEE0507D2110A192006AAE30 /* ViewController.h */,
+				AEE0507E2110A192006AAE30 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEE050B72110B6B8006AAE30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEE050B12110AADF006AAE30 /* TgCell.xib */,
+				AEE050B32110ACD1006AAE30 /* TgCell.h */,
+				AEE050B42110ACD1006AAE30 /* TgCell.m */,
+				AEE050B92111D941006AAE30 /* FooterView.xib */,
+				AEE050BB2111D9DD006AAE30 /* FooterView.h */,
+				AEE050BC2111D9DD006AAE30 /* FooterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEE050B82110B6E1006AAE30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEE050AE2110A282006AAE30 /* TuanGou.h */,
+				AEE050AF2110A282006AAE30 /* TuanGou.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE050872110A195006AAE30 /* LaunchScreen.storyboard in Resources */,
+				AEE050BA2111D941006AAE30 /* FooterView.xib in Resources */,
 				AEE050AD2110A23C006AAE30 /* tgs.plist in Resources */,
 				AEE050B22110AADF006AAE30 /* TgCell.xib in Resources */,
 				AEE050842110A195006AAE30 /* Assets.xcassets in Resources */,
@@ -283,6 +316,7 @@
 				AEE0507F2110A192006AAE30 /* ViewController.m in Sources */,
 				AEE0508A2110A195006AAE30 /* main.m in Sources */,
 				AEE0507C2110A192006AAE30 /* AppDelegate.m in Sources */,
+				AEE050BD2111D9DD006AAE30 /* FooterView.m in Sources */,
 				AEE050B52110ACD1006AAE30 /* TgCell.m in Sources */,
 				AEE050B02110A282006AAE30 /* TuanGou.m in Sources */,
 			);
