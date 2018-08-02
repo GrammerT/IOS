@@ -51,7 +51,7 @@
         cell = [[WBCell alloc] init];
     }
     WBCellFrame *status = self.wbStatusesFrames[indexPath.row];
-    cell.status = status.status;
+    cell.statusFrame = status;
     return cell;
 }
 

@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WBStatus;
+@class WBCellFrame;
 
 @interface WBCell : UITableViewCell
 
-@property (nonatomic,strong) WBStatus *status;
+@property (nonatomic,strong) WBCellFrame *statusFrame;
 
-- (void)setStatus:(WBStatus*)status;
+- (void)setStatusFrame:(WBCellFrame *)statusFrame;
 
 @end

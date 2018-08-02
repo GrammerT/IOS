@@ -8,6 +8,7 @@
 
 #import "WBCell.h"
 #import "WBStatus.h"
+#import "WBCellFrame.h"
 
 #define kNameFont [UIFont systemFontOfSize:14]
 #define kTextFont [UIFont systemFontOfSize:16]
@@ -81,9 +82,10 @@
     return _pictureView;
 }
 
-- (void)setStatus:(WBStatus*)status
+- (void)setStatusFrame:(WBCellFrame *)statusFrame;
+
 {
-    _status = status;
+    _statusFrame = statusFrame;
     //! 设置数据源
     [self setDataSource];
     //！计算位置
@@ -94,10 +96,11 @@
 
 - (void)setDataSource
 {
-    self.nameLabel.text = self.status.name;
-    self.headView.image = [UIImage imageNamed:self.status.icon];
-    self.textView.text = self.status.text;
-    if(self.status.vip)
+    WBStatus *status = self.statusFrame.status;
+    self.nameLabel.text = status.name;
+    self.headView.image = [UIImage imageNamed:status.icon];
+    self.textView.text = status.text;
+    if(status.vip)
     {
         self.vipView.hidden = NO;
     }
@@ -105,10 +108,10 @@
     {
         self.vipView.hidden = NO;
     }
-    if(self.status.picture.length>0)
+    if(status.picture.length>0)
     {
         self.pictureView.hidden = NO;
-        self.pictureView.image = [UIImage imageNamed:self.status.picture];
+        self.pictureView.image = [UIImage imageNamed:status.picture];
     }
     else
     {
@@ -120,42 +123,15 @@
 
 - (void)calcFrame
 {
-    CGFloat padding = 10;
-    CGFloat headviewWidth = 60;
-    CGFloat headviewHeight = 60;
-    self.headView.frame = CGRectMake(padding, padding, headviewWidth, headviewHeight);
-    NSDictionary *nameDict = @{NSFontAttributeName:kNameFont};
-    CGRect nameFrame = [self.status.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nameDict context:nil];
-    nameFrame.origin.x = CGRectGetMaxX(self.headView.frame)+padding;
-    nameFrame.origin.y = padding + (self.headView.bounds.size.height-nameFrame.size.height) *0.5;
-    self.nameLabel.frame = nameFrame;
-    CGRect vipFrame;
-    vipFrame.origin.x = CGRectGetMaxX(self.nameLabel.frame)+padding;
-    vipFrame.origin.y = self.nameLabel.frame.origin.y;
-    vipFrame.size.width = 14;
-    vipFrame.size.height = 14;
-    
-    self.vipView.frame = vipFrame;
-    
+    self.headView.frame = self.statusFrame.iconF;
+    self.nameLabel.frame = self.statusFrame.nameF;
 
-    NSDictionary *textDict = @{NSFontAttributeName:kTextFont};
-    CGRect textFrame = [self.status.text boundingRectWithSize:CGSizeMake(375, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil];
-    textFrame.origin.x = padding;
-    textFrame.origin.y = CGRectGetMaxY(self.headView.frame)+padding;
-    self.textView.frame = textFrame;
-    CGFloat cellHeight;
+    self.vipView.frame = self.statusFrame.vipF;
+
+    self.textView.frame = self.statusFrame.textF;
     if(!self.pictureView.hidden)
     {
-        CGRect pictRect ;
-        pictRect.origin.x = padding;
-        pictRect.origin.y = CGRectGetMaxY(self.textView.frame)+padding;
-        pictRect.size = CGSizeMake(150, 200);
-        self.pictureView.frame = pictRect;
-        cellHeight = CGRectGetMaxY(self.pictureView.frame)+padding;
-    }
-    else
-    {
-        cellHeight = CGRectGetMaxY(self.textView.frame)+padding;
+        self.pictureView.frame = self.statusFrame.pictureF;
     }
 }
 
