@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WBStatus.h"
 #import "WBCell.h"
+#import "WBCellFrame.h"
 
 @interface ViewController ()
 
@@ -42,6 +43,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"%s",__func__);
     static NSString *ID = @"Cell";
     WBCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID];
     if(cell==nil)
@@ -61,7 +63,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    NSLog(@"%s",__func__);
+    WBCellFrame *frame = [[WBCellFrame alloc] init];
+    frame.status = self.wbStatuses[indexPath.row];
+    NSLog(@"%f",frame.cellHeight);
+    return frame.cellHeight;
 }
 
 

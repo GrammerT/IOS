@@ -18,6 +18,7 @@
 		AEE050FE21133097006AAE30 /* statuses.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEE050FD21133097006AAE30 /* statuses.plist */; };
 		AEE05119211331C2006AAE30 /* WBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05118211331C2006AAE30 /* WBStatus.m */; };
 		AEE05121211336F9006AAE30 /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05120211336F9006AAE30 /* WBCell.m */; };
+		AEE05125211355F5006AAE30 /* WBCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05124211355F5006AAE30 /* WBCellFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		AEE05118211331C2006AAE30 /* WBStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBStatus.m; sourceTree = "<group>"; };
 		AEE0511F211336F9006AAE30 /* WBCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBCell.h; sourceTree = "<group>"; };
 		AEE05120211336F9006AAE30 /* WBCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCell.m; sourceTree = "<group>"; };
+		AEE05123211355F5006AAE30 /* WBCellFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBCellFrame.h; sourceTree = "<group>"; };
+		AEE05124211355F5006AAE30 /* WBCellFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCellFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				AEE0511F211336F9006AAE30 /* WBCell.h */,
+				AEE05123211355F5006AAE30 /* WBCellFrame.h */,
+				AEE05124211355F5006AAE30 /* WBCellFrame.m */,
 				AEE05120211336F9006AAE30 /* WBCell.m */,
 			);
 			path = View;
@@ -304,6 +309,7 @@
 				AEE050DA21133037006AAE30 /* main.m in Sources */,
 				AEE05119211331C2006AAE30 /* WBStatus.m in Sources */,
 				AEE05121211336F9006AAE30 /* WBCell.m in Sources */,
+				AEE05125211355F5006AAE30 /* WBCellFrame.m in Sources */,
 				AEE050CC21133035006AAE30 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

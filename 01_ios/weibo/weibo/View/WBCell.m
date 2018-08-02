@@ -64,6 +64,7 @@
     {
         _textView = [[UILabel alloc] init];
         _textView.font = kTextFont;
+        _textView.numberOfLines = 0;
         [self.contentView addSubview:_textView];
     }
     return _textView;
@@ -104,10 +105,14 @@
     {
         self.vipView.hidden = NO;
     }
-    if(self.status.picture!=nil)
+    if(self.status.picture.length>0)
     {
         self.pictureView.hidden = NO;
         self.pictureView.image = [UIImage imageNamed:self.status.picture];
+    }
+    else
+    {
+        self.pictureView.hidden= YES;
     }
 }
 
@@ -134,11 +139,24 @@
     
 
     NSDictionary *textDict = @{NSFontAttributeName:kTextFont};
-    CGRect textFrame = [self.status.text boundingRectWithSize:CGSizeMake(300, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil];
+    CGRect textFrame = [self.status.text boundingRectWithSize:CGSizeMake(375, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil];
     textFrame.origin.x = padding;
     textFrame.origin.y = CGRectGetMaxY(self.headView.frame)+padding;
     self.textView.frame = textFrame;
-    
+    CGFloat cellHeight;
+    if(!self.pictureView.hidden)
+    {
+        CGRect pictRect ;
+        pictRect.origin.x = padding;
+        pictRect.origin.y = CGRectGetMaxY(self.textView.frame)+padding;
+        pictRect.size = CGSizeMake(150, 200);
+        self.pictureView.frame = pictRect;
+        cellHeight = CGRectGetMaxY(self.pictureView.frame)+padding;
+    }
+    else
+    {
+        cellHeight = CGRectGetMaxY(self.textView.frame)+padding;
+    }
 }
 
 
