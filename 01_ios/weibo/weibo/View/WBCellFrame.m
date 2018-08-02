@@ -57,4 +57,17 @@
     }
 }
 
++ (NSArray*)statusFrames
+{
+    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"statuses.plist" ofType:nil]];
+    NSMutableArray *marray = [NSMutableArray array];
+    for(NSDictionary *dict in array)
+    {
+        WBCellFrame *frame = [[WBCellFrame alloc] init];
+        frame.status = [WBStatus statusWithDictionary:dict];
+        [marray addObject:frame];
+    }
+    return marray;
+}
+
 @end

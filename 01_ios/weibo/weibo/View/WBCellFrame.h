@@ -28,4 +28,7 @@
 - (void)setStatus:(WBStatus *)status;
 
 
++ (NSArray*)statusFrames;
+
+
 @end

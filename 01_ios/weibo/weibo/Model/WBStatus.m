@@ -30,15 +30,15 @@
     return [[self alloc] initWithDictionary:dict];
 }
 
-+ (NSMutableArray*)statuses
-{
-    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"statuses.plist" ofType:nil]];
-    NSMutableArray *marray = [NSMutableArray array];
-    for(NSDictionary *dict in array)
-    {
-        [marray addObject:[self statusWithDictionary:dict]];
-    }
-    return marray;
-}
+//+ (NSMutableArray*)statuses
+//{
+//    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"statuses.plist" ofType:nil]];
+//    NSMutableArray *marray = [NSMutableArray array];
+//    for(NSDictionary *dict in array)
+//    {
+//        [marray addObject:[self statusWithDictionary:dict]];
+//    }
+//    return marray;
+//}
 
 @end

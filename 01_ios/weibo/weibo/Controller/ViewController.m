@@ -13,19 +13,19 @@
 
 @interface ViewController ()
 
-@property (nonatomic,strong) NSMutableArray *wbStatuses;
+@property (nonatomic,strong) NSArray *wbStatusesFrames;
 
 @end
 
 @implementation ViewController
 
-- (NSMutableArray*)wbStatuses
+- (NSArray*)wbStatusesFrames
 {
-    if(_wbStatuses==nil)
+    if(_wbStatusesFrames==nil)
     {
-        _wbStatuses = [WBStatus statuses];
+        _wbStatusesFrames = [WBCellFrame statusFrames];
     }
-    return _wbStatuses;
+    return _wbStatusesFrames;
 }
 
 
@@ -50,24 +50,22 @@
     {
         cell = [[WBCell alloc] init];
     }
-    WBStatus *status = self.wbStatuses[indexPath.row];
-    [cell setStatus:status];
+    WBCellFrame *status = self.wbStatusesFrames[indexPath.row];
+    cell.status = status.status;
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.wbStatuses.count;
+    return self.wbStatusesFrames.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__func__);
-    WBCellFrame *frame = [[WBCellFrame alloc] init];
-    frame.status = self.wbStatuses[indexPath.row];
-    NSLog(@"%f",frame.cellHeight);
-    return frame.cellHeight;
+    
+    return [self.wbStatusesFrames[indexPath.row] cellHeight];
 }
 
 

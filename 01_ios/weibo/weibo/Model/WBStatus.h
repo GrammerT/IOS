@@ -22,7 +22,7 @@
 
 + (instancetype)statusWithDictionary:(NSDictionary*)dict;
 
-+ (NSMutableArray*)statuses;
+//+ (NSMutableArray*)statuses;
 
 
 @end
