@@ -9,6 +9,10 @@
 #import "WBCell.h"
 #import "WBStatus.h"
 
+#define kNameFont [UIFont systemFontOfSize:14]
+#define kTextFont [UIFont systemFontOfSize:16]
+
+
 @interface WBCell ()
 @property (nonatomic,strong) UIImageView *headView;
 @property (nonatomic,strong) UILabel *nameLabel;
@@ -36,6 +40,7 @@
     if(_nameLabel==nil)
     {
         _nameLabel = [[UILabel alloc] init];
+        _nameLabel.font = kNameFont;
         [self.contentView addSubview:_nameLabel];
     }
     return _nameLabel;
@@ -58,6 +63,7 @@
     if(_textView==nil)
     {
         _textView = [[UILabel alloc] init];
+        _textView.font = kTextFont;
         [self.contentView addSubview:_textView];
     }
     return _textView;
@@ -105,12 +111,34 @@
     }
 }
 
+
+
 - (void)calcFrame
 {
     CGFloat padding = 10;
-    CGFloat headviewWidth = 40;
-    CGFloat headviewHeight = 40;
+    CGFloat headviewWidth = 60;
+    CGFloat headviewHeight = 60;
     self.headView.frame = CGRectMake(padding, padding, headviewWidth, headviewHeight);
+    NSDictionary *nameDict = @{NSFontAttributeName:kNameFont};
+    CGRect nameFrame = [self.status.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nameDict context:nil];
+    nameFrame.origin.x = CGRectGetMaxX(self.headView.frame)+padding;
+    nameFrame.origin.y = padding + (self.headView.bounds.size.height-nameFrame.size.height) *0.5;
+    self.nameLabel.frame = nameFrame;
+    CGRect vipFrame;
+    vipFrame.origin.x = CGRectGetMaxX(self.nameLabel.frame)+padding;
+    vipFrame.origin.y = self.nameLabel.frame.origin.y;
+    vipFrame.size.width = 14;
+    vipFrame.size.height = 14;
+    
+    self.vipView.frame = vipFrame;
+    
+
+    NSDictionary *textDict = @{NSFontAttributeName:kTextFont};
+    CGRect textFrame = [self.status.text boundingRectWithSize:CGSizeMake(300, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil];
+    textFrame.origin.x = padding;
+    textFrame.origin.y = CGRectGetMaxY(self.headView.frame)+padding;
+    self.textView.frame = textFrame;
+    
 }
 
 
