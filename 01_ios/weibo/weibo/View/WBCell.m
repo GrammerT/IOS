@@ -26,6 +26,7 @@
     if(_headView==nil)
     {
         _headView = [[UIImageView alloc] init];
+        [self.contentView addSubview:_headView];
     }
     return _headView;
 }
@@ -35,6 +36,7 @@
     if(_nameLabel==nil)
     {
         _nameLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_nameLabel];
     }
     return _nameLabel;
 }
@@ -46,6 +48,7 @@
         _vipView = [[UIImageView alloc] init];
         _vipView.image = [UIImage imageNamed:@"vip"];
         _vipView.hidden = YES;
+        [self.contentView addSubview:_vipView];
     }
     return _vipView;
 }
@@ -55,6 +58,7 @@
     if(_textView==nil)
     {
         _textView = [[UILabel alloc] init];
+        [self.contentView addSubview:_textView];
     }
     return _textView;
 }
@@ -65,6 +69,7 @@
     {
         _pictureView = [[UIImageView alloc] init];
         _pictureView.hidden = YES;
+        [self.contentView addSubview:_pictureView];
     }
     return _pictureView;
 }
@@ -102,9 +107,10 @@
 
 - (void)calcFrame
 {
-    
-    self.headView.frame = CGRectMake(10, 10, 20, 20);
-    self.contentView.backgroundColor = [UIColor redColor];
+    CGFloat padding = 10;
+    CGFloat headviewWidth = 40;
+    CGFloat headviewHeight = 40;
+    self.headView.frame = CGRectMake(padding, padding, headviewWidth, headviewHeight);
 }
 
 
