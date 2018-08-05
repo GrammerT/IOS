@@ -15,6 +15,7 @@
 		AE8DFBAE2116D19E00B24308 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8DFBAD2116D19E00B24308 /* main.m */; };
 		AE8DFBB82116D19E00B24308 /* game_dazhuankuaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8DFBB72116D19E00B24308 /* game_dazhuankuaiTests.m */; };
 		AE8DFBC32116D19E00B24308 /* game_dazhuankuaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8DFBC22116D19E00B24308 /* game_dazhuankuaiUITests.m */; };
+		AE8DFBD221173D0B00B24308 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8DFBD121173D0B00B24308 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AE8DFBBE2116D19E00B24308 /* game_dazhuankuaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = game_dazhuankuaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8DFBC22116D19E00B24308 /* game_dazhuankuaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game_dazhuankuaiUITests.m; sourceTree = "<group>"; };
 		AE8DFBC42116D19E00B24308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8DFBD121173D0B00B24308 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8DFBD221173D0B00B24308 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				AE8DFBB62116D19E00B24308 /* game_dazhuankuaiTests */,
 				AE8DFBC12116D19E00B24308 /* game_dazhuankuaiUITests */,
 				AE8DFB9C2116D19800B24308 /* Products */,
+				AE8DFBD021173D0A00B24308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +134,14 @@
 				AE8DFBC42116D19E00B24308 /* Info.plist */,
 			);
 			path = game_dazhuankuaiUITests;
+			sourceTree = "<group>";
+		};
+		AE8DFBD021173D0A00B24308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE8DFBD121173D0B00B24308 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
