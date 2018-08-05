@@ -9,6 +9,7 @@
 #import "WBCellFrame.h"
 #import "WBStatus.h"
 #import "WBCell.h"
+#import "NSString+Tools.h"
 
 #define kNameFont [UIFont systemFontOfSize:14]
 #define kTextFont [UIFont systemFontOfSize:16]
@@ -23,7 +24,9 @@
     CGFloat headviewHeight = 60;
     self.iconF = CGRectMake(padding, padding, headviewWidth, headviewHeight);
     NSDictionary *nameDict = @{NSFontAttributeName:kNameFont};
-    CGRect nameFrame = [_status.name boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nameDict context:nil];
+    
+    CGRect nameFrame = [_status.name textRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) attribute:nameDict];
+    
     nameFrame.origin.x = CGRectGetMaxX(self.iconF)+padding;
     nameFrame.origin.y = padding + (self.iconF.size.height-nameFrame.size.height) *0.5;
     self.nameF = nameFrame;
@@ -37,7 +40,7 @@
     
     
     NSDictionary *textDict = @{NSFontAttributeName:kTextFont};
-    CGRect textFrame = [_status.text boundingRectWithSize:CGSizeMake(375, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil];
+    CGRect textFrame = [_status.text textRectWithSize:CGSizeMake(375,MAXFLOAT) attribute:textDict];
     textFrame.origin.x = padding;
     textFrame.origin.y = CGRectGetMaxY(self.iconF)+padding;
     self.textF = textFrame;

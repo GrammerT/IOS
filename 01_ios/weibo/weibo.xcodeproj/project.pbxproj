@@ -19,6 +19,7 @@
 		AEE05119211331C2006AAE30 /* WBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05118211331C2006AAE30 /* WBStatus.m */; };
 		AEE05121211336F9006AAE30 /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05120211336F9006AAE30 /* WBCell.m */; };
 		AEE05125211355F5006AAE30 /* WBCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE05124211355F5006AAE30 /* WBCellFrame.m */; };
+		AEE051282116CE2E006AAE30 /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE051272116CE2E006AAE30 /* NSString+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		AEE05120211336F9006AAE30 /* WBCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCell.m; sourceTree = "<group>"; };
 		AEE05123211355F5006AAE30 /* WBCellFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBCellFrame.h; sourceTree = "<group>"; };
 		AEE05124211355F5006AAE30 /* WBCellFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBCellFrame.m; sourceTree = "<group>"; };
+		AEE051262116CE2E006AAE30 /* NSString+Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
+		AEE051272116CE2E006AAE30 /* NSString+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 				AEE050D921133037006AAE30 /* main.m */,
 				AEE0511A211331C8006AAE30 /* Model */,
 				AEE05122211336FE006AAE30 /* View */,
+				AEE051292116CE36006AAE30 /* Others */,
 			);
 			path = weibo;
 			sourceTree = "<group>";
@@ -172,6 +176,15 @@
 				AEE05120211336F9006AAE30 /* WBCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AEE051292116CE36006AAE30 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				AEE051262116CE2E006AAE30 /* NSString+Tools.h */,
+				AEE051272116CE2E006AAE30 /* NSString+Tools.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +322,7 @@
 				AEE050DA21133037006AAE30 /* main.m in Sources */,
 				AEE05119211331C2006AAE30 /* WBStatus.m in Sources */,
 				AEE05121211336F9006AAE30 /* WBCell.m in Sources */,
+				AEE051282116CE2E006AAE30 /* NSString+Tools.m in Sources */,
 				AEE05125211355F5006AAE30 /* WBCellFrame.m in Sources */,
 				AEE050CC21133035006AAE30 /* AppDelegate.m in Sources */,
 			);
