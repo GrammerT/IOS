@@ -11,6 +11,9 @@
 #import "WBCell.h"
 #import "WBCellFrame.h"
 
+
+static NSString *ID = @"Cell";
+
 @interface ViewController ()
 
 @property (nonatomic,strong) NSArray *wbStatusesFrames;
@@ -33,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    self.view.backgroundColor = [UIColor redColor];
+    //! new function regist class
+    [self.tableView registerClass:[WBCell class] forCellReuseIdentifier:ID];
 }
 
 
@@ -44,12 +49,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%s",__func__);
-    static NSString *ID = @"Cell";
-    WBCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID];
-    if(cell==nil)
-    {
-        cell = [[WBCell alloc] init];
-    }
+    //! old function
+//    WBCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID];
+//    if(cell==nil)
+//    {
+//        cell = [[WBCell alloc] init];
+//    }
+    //! new function.
+    WBCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     WBCellFrame *status = self.wbStatusesFrames[indexPath.row];
     cell.statusFrame = status;
     return cell;
