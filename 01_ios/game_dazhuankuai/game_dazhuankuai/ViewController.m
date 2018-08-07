@@ -46,20 +46,20 @@
 {
     if(CGRectGetMinY(self.ball.frame)<=0)
     {
-        self.speed = CGPointMake(0, 5);
+        self.speed = CGPointMake(-self.speed.x, 5);
     }
     if(CGRectGetMinX(self.ball.frame)<=CGRectGetMinX(self.view.frame))
     {
-        
+        self.speed = CGPointMake(-self.speed.x, self.speed.y);
     }
     if(CGRectGetMaxX(self.ball.frame)>=CGRectGetMaxX(self.view.frame))
     {
-        
+        self.speed = CGPointMake(-self.speed.x, self.speed.y);
     }
     if(CGRectIntersectsRect(self.paddle.frame, self.ball.frame))
     {
-        self.speed = CGPointMake(0, -5);
-        self.speed = CGPointMake(self.speed.x+self.speed_x,self.speed.y);
+        self.speed = CGPointMake(-self.speed.x, -5);
+        self.speed = CGPointMake(self.speed.x+self.speed_x/120.0,self.speed.y);
     }
     if(CGRectGetMinY(self.ball.frame)>=CGRectGetMaxY(self.view.frame))
     {
@@ -68,7 +68,7 @@
         NSLog(@"you lose.");
         [self.tabGesture setEnabled:YES];
         [self.gameTimer invalidate];
-//        self.ball.center = CGPointMake(self.paddle.center.x, self.paddle.center.y-self.paddle)
+        self.ball.center = CGPointMake(self.paddle.center.x, self.paddle.center.y-self.paddle.frame.size.height/2-self.ball.frame.size.height/2);
     }
     
 }
@@ -78,7 +78,12 @@
     {
         CGPoint point = [sender locationInView:self.view];
         self.paddle.center = CGPointMake(point.x,self.paddle.center.y);
+        if(self.gameTimer)
         self.speed_x = [sender velocityInView:self.view].x;
+    }
+    else if (UIGestureRecognizerStateEnded==sender.state)
+    {
+        self.speed_x = 0;
     }
 
 }
@@ -90,7 +95,7 @@
         if(CGRectIntersectsRect(view.frame, self.ball.frame)&&(!view.isHidden))
         {
             view.hidden = YES;
-            self.speed = CGPointMake(0, 5);
+            self.speed = CGPointMake(self.speed.x, 5);
         }
     }
     
