@@ -115,6 +115,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="ball" destination="JTO-JI-4Rq" id="Yt0-mc-Vcm"/>
+                        <outlet property="paddle" destination="2vD-Fc-5R5" id="6Zm-1z-fhx"/>
                         <outletCollection property="blocks" destination="rMc-ey-ZIa" id="y5L-f5-LNY"/>
                     </connections>
                 </viewController>
