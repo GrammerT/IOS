@@ -23,6 +23,7 @@
 @property (nonatomic,strong) CADisplayLink *gameTimer;
 //! ball's speed
 @property (nonatomic,assign) CGPoint speed;
+@property (nonatomic,assign) CGFloat speed_x;
 
 @end
 
@@ -58,14 +59,28 @@
     if(CGRectIntersectsRect(self.paddle.frame, self.ball.frame))
     {
         self.speed = CGPointMake(0, -5);
+        self.speed = CGPointMake(self.speed.x+self.speed_x,self.speed.y);
     }
-    if(CGRectGetMaxY(self.ball.frame)>=CGRectGetMaxY(self.view.frame))
+    if(CGRectGetMinY(self.ball.frame)>=CGRectGetMaxY(self.view.frame))
     {
 //        lose
 //        self.speed.y = 5;
         NSLog(@"you lose.");
+        [self.tabGesture setEnabled:YES];
+        [self.gameTimer invalidate];
+//        self.ball.center = CGPointMake(self.paddle.center.x, self.paddle.center.y-self.paddle)
     }
     
+}
+- (IBAction)paddleMove:(UIPanGestureRecognizer *)sender
+{
+    if(UIGestureRecognizerStateChanged == sender.state)
+    {
+        CGPoint point = [sender locationInView:self.view];
+        self.paddle.center = CGPointMake(point.x,self.paddle.center.y);
+        self.speed_x = [sender velocityInView:self.view].x;
+    }
+
 }
 
 - (void)checkBlock

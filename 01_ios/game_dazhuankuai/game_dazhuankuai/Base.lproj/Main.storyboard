@@ -99,11 +99,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paddle" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-Fc-5R5">
-                                <rect key="frame" x="150" y="572" width="64" height="20"/>
+                                <rect key="frame" x="150" y="616" width="64" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-JI-4Rq">
-                                <rect key="frame" x="177" y="551" width="20" height="20"/>
+                                <rect key="frame" x="172" y="597" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -112,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="pHs-ua-A0N"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="i4i-Hb-mH2" appends="YES" id="AMj-pL-sfU"/>
+                            <outletCollection property="gestureRecognizers" destination="MTO-Uh-Cfn" appends="YES" id="grv-Py-zTF"/>
                         </connections>
                     </view>
                     <connections>
@@ -146,6 +147,11 @@
                         <action selector="tapClick:" destination="BYZ-38-t0r" id="Ufo-6j-vXK"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MTO-Uh-Cfn">
+                    <connections>
+                        <action selector="paddleMove:" destination="BYZ-38-t0r" id="lu3-W1-gwb"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="36" y="33.733133433283363"/>
         </scene>
