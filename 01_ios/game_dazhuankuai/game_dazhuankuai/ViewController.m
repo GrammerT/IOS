@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *blocks;
 @property (weak, nonatomic) IBOutlet UIImageView *ball;
 @property (weak, nonatomic) IBOutlet UIImageView *paddle;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tabGesture;
 
 
 //! ball's start point
@@ -44,7 +45,7 @@
 {
     if(CGRectGetMinY(self.ball.frame)<=0)
     {
-//        self.speed.y = 5.0;
+        self.speed = CGPointMake(0, 5);
     }
     if(CGRectGetMinX(self.ball.frame)<=CGRectGetMinX(self.view.frame))
     {
@@ -54,10 +55,15 @@
     {
         
     }
+    if(CGRectGetMaxY(self.ball.frame)>=CGRectGetMinY(self.paddle.frame))
+    {
+        self.speed = CGPointMake(0, -5);
+    }
     if(CGRectGetMaxY(self.ball.frame)>=CGRectGetMaxY(self.view.frame))
     {
 //        lose
 //        self.speed.y = 5;
+        NSLog(@"you lose.");
     }
     
 }
@@ -65,7 +71,11 @@
 - (void)checkBlock
 {
     for (UIImageView *view in self.blocks) {
-//        if()
+        if(CGRectContainsPoint(view.frame, self.ball.center)&&(!view.isHidden))
+        {
+            view.hidden = YES;
+            self.speed = CGPointMake(0, 5);
+        }
     }
     
 }
@@ -82,9 +92,11 @@
 
 - (IBAction)tapClick:(UITapGestureRecognizer *)sender {
     NSLog(@"%s",__func__);
+    [self.tabGesture setEnabled:NO];
     self.speed = CGPointMake(0, -5);
     //! start timer.
-    self.gameTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updataBallLocation)];
+    self.gameTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(onTimeout)];
+    
     [self.gameTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 

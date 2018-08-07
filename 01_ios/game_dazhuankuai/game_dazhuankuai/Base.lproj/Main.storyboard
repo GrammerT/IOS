@@ -117,7 +117,27 @@
                     <connections>
                         <outlet property="ball" destination="JTO-JI-4Rq" id="Yt0-mc-Vcm"/>
                         <outlet property="paddle" destination="2vD-Fc-5R5" id="6Zm-1z-fhx"/>
+                        <outlet property="tabGesture" destination="i4i-Hb-mH2" id="owE-97-Fh7"/>
                         <outletCollection property="blocks" destination="rMc-ey-ZIa" id="y5L-f5-LNY"/>
+                        <outletCollection property="blocks" destination="qX9-lb-QHH" id="hGp-yP-b68"/>
+                        <outletCollection property="blocks" destination="Z3L-jU-teL" id="dbE-PD-j0V"/>
+                        <outletCollection property="blocks" destination="uol-bz-tU3" id="4Yk-tq-d7H"/>
+                        <outletCollection property="blocks" destination="0zK-di-WJO" id="tOu-4O-Kxl"/>
+                        <outletCollection property="blocks" destination="cE7-pa-XL0" id="4x4-J6-sOX"/>
+                        <outletCollection property="blocks" destination="BqX-lF-upf" id="09S-18-214"/>
+                        <outletCollection property="blocks" destination="H3d-w6-ZgW" id="4vT-x6-MA4"/>
+                        <outletCollection property="blocks" destination="Pz7-4n-kpx" id="Vog-Pf-0iN"/>
+                        <outletCollection property="blocks" destination="N3J-c7-pNO" id="3Bu-RX-DZ0"/>
+                        <outletCollection property="blocks" destination="0cS-i7-bqB" id="mO0-mS-N5g"/>
+                        <outletCollection property="blocks" destination="ukE-Ny-VQo" id="wW8-2Y-MaO"/>
+                        <outletCollection property="blocks" destination="5au-Nw-5pY" id="lbJ-O0-xKb"/>
+                        <outletCollection property="blocks" destination="W3Z-Bd-7PG" id="MLU-PV-uyv"/>
+                        <outletCollection property="blocks" destination="yXe-dg-8yk" id="RsJ-JF-ouj"/>
+                        <outletCollection property="blocks" destination="Kn7-93-dMx" id="XG9-Al-Bhg"/>
+                        <outletCollection property="blocks" destination="7hK-28-Pec" id="JCW-Hk-Y9y"/>
+                        <outletCollection property="blocks" destination="Hxy-h6-9nJ" id="grM-hr-RSz"/>
+                        <outletCollection property="blocks" destination="25u-xB-Cpt" id="pHp-Rc-rFQ"/>
+                        <outletCollection property="blocks" destination="4Iz-K6-BpW" id="cyp-J7-BnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
