@@ -73,6 +73,7 @@
 - (void)updataBallLocation
 {
     NSLog(@"update ball location...");
+    self.ball.center = CGPointMake(self.ball.center.x+self.speed.x, self.ball.center.y+self.speed.y);
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -81,9 +82,10 @@
 
 - (IBAction)tapClick:(UITapGestureRecognizer *)sender {
     NSLog(@"%s",__func__);
+    self.speed = CGPointMake(0, -5);
     //! start timer.
     self.gameTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updataBallLocation)];
-    
+    [self.gameTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void)didReceiveMemoryWarning {
