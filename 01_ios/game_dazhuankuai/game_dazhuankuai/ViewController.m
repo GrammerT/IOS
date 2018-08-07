@@ -55,7 +55,7 @@
     {
         
     }
-    if(CGRectGetMaxY(self.ball.frame)>=CGRectGetMinY(self.paddle.frame))
+    if(CGRectIntersectsRect(self.paddle.frame, self.ball.frame))
     {
         self.speed = CGPointMake(0, -5);
     }
@@ -71,7 +71,8 @@
 - (void)checkBlock
 {
     for (UIImageView *view in self.blocks) {
-        if(CGRectContainsPoint(view.frame, self.ball.center)&&(!view.isHidden))
+//        if(CGRectContainsPoint(view.frame, self.ball.center)&&(!view.isHidden))
+        if(CGRectIntersectsRect(view.frame, self.ball.frame)&&(!view.isHidden))
         {
             view.hidden = YES;
             self.speed = CGPointMake(0, 5);
