@@ -14,6 +14,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ball;
 @property (weak, nonatomic) IBOutlet UIImageView *paddle;
 
+
+//! ball's start point
+@property (nonatomic,assign) CGPoint originBallCenter;
+
+//! timer
+@property (nonatomic,strong) CADisplayLink *gameTimer;
+//! ball's speed
 @property (nonatomic,assign) CGPoint speed;
 
 @end
@@ -30,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _originBallCenter = self.ball.center;
 }
 
 - (void)checkScree
@@ -64,12 +72,18 @@
 
 - (void)updataBallLocation
 {
-    
+    NSLog(@"update ball location...");
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 - (IBAction)tapClick:(UITapGestureRecognizer *)sender {
     NSLog(@"%s",__func__);
     //! start timer.
+    self.gameTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updataBallLocation)];
+    
 }
 
 - (void)didReceiveMemoryWarning {
