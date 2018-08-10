@@ -13,9 +13,10 @@
 
 static NSString *ID = @"Cell";
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) NSArray *cellFrames;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -50,7 +51,7 @@ static NSString *ID = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    QQCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    QQCell *cell = [QQCellFrame cellWithTableView:tableView];
     QQCellFrame *frame = self.cellFrames[indexPath.row];
     cell.cellFrame = frame;
     return cell;

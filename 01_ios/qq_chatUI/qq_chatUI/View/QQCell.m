@@ -17,6 +17,16 @@
 
 @implementation QQCell
 
+//-(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+//{
+//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    if(self)
+//    {
+//
+//    }
+//    return self;
+//}
+
 -(UIImageView*)headImageView
 {
     if(_headImageView==nil)
@@ -33,6 +43,7 @@
     {
         _timeLabel = [[UILabel alloc] init];
         _timeLabel.textAlignment = NSTextAlignmentCenter;
+        _timeLabel.font = [UIFont systemFontOfSize:13.0];
         [self.contentView addSubview:_timeLabel];
     }
     return _timeLabel;
@@ -43,7 +54,10 @@
     if(_msgBtn==nil)
     {
         _msgBtn = [[UIButton alloc] init];
-        _msgBtn.titleLabel.numberOfLines = 0;
+        _msgBtn.titleLabel.numberOfLines = 0;//! 
+        _msgBtn.backgroundColor = [UIColor grayColor];
+        _msgBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        
         [self.contentView addSubview:_msgBtn];
     }
     return _msgBtn;
@@ -54,7 +68,12 @@
 {
     _cellFrame = cellFrame;
     QQMessage *msg = self.cellFrame.qqmessage;
+    self.timeLabel.frame = self.cellFrame.timeLabelF;
+    self.headImageView.frame = self.cellFrame.headViewF;
+    self.msgBtn.frame = self.cellFrame.textBtnF;
+    
     self.timeLabel.text = msg.time;
+//    self.timeLabel
     [self.msgBtn setTitle:msg.text forState:UIControlStateNormal];
     if(msg.type==eBySelf)
     {
@@ -64,9 +83,7 @@
     {
         self.headImageView.image = [UIImage imageNamed:@"Jobs"];
     }
-    self.timeLabel.frame = self.cellFrame.timeLabelF;
-    self.headImageView.frame = self.cellFrame.headViewF;
-    self.msgBtn.frame = self.cellFrame.textBtnF;
+
 }
 
 - (void)awakeFromNib {

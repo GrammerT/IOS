@@ -8,12 +8,15 @@
 
 #import "QQCellFrame.h"
 #import "QQMessage.h"
+#import "QQCell.h"
 #import "NSString+tool.h"
 
 
 #define kNameFont [UIFont systemFontOfSize:14]
 #define kTextFont [UIFont systemFontOfSize:16]
 
+#define bScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define bNormalHeight 44
 @implementation QQCellFrame
 
 + (NSArray*)qqCellFrames
@@ -26,6 +29,19 @@
         [marray addObject:frame];
     }
     return marray;
+    
+}
+
++ (id)cellWithTableView:(UITableView*)tableView
+{
+    static NSString *ID = @"qqcell";
+    
+    QQCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if(cell==nil)
+    {
+        cell = [[QQCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    return cell;
 }
 
 -(void)setQqmessage:(QQMessage *)qqmessage
@@ -39,30 +55,50 @@
 {
     CGFloat padding_x = 10;
     CGFloat padding_y = 10;
-    CGFloat timeWidth = 355;
-    CGFloat timeHeight = 20;
-    self.timeLabelF = CGRectMake(padding_x, padding_y, timeWidth, timeHeight);
-    CGFloat headViewWidth = 60;
-    NSDictionary *nameDict = @{NSFontAttributeName:kTextFont};
+    CGFloat timex_y=0;
+    CGFloat timeWidth = bScreenWidth;
+    CGFloat timeHeight = bNormalHeight;
+    _timeLabelF = CGRectMake(timex_y, timex_y, timeWidth, timeHeight);
+    
+    CGFloat headviewX = 0;
+    CGFloat headviewY = CGRectGetMaxY(_timeLabelF);
+    CGFloat headviewW = 50;
+    CGFloat headviewH = 50;
 
-    self.textBtnF = [self.qqmessage.text textRectWithSize:CGSizeMake(285, MAXFLOAT) attribute:nameDict];
+
+    
+    
+
     if(self.qqmessage.type==eBySelf)
     {
-        self.headViewF = CGRectMake(CGRectGetMaxX(self.timeLabelF)-headViewWidth, CGRectGetMaxY(self.timeLabelF)+10, headViewWidth, headViewWidth);
-        CGFloat x = self.headViewF.origin.x-10-self.textBtnF.size.width;
-        CGFloat y = CGRectGetMaxY(self.timeLabelF)+10;
-        self.textBtnF = CGRectMake(x, y , self.textBtnF.size.width, self.textBtnF.size.height);
+        headviewX = bScreenWidth-headviewW-padding_x;
     }
     else
     {
-        self.headViewF = CGRectMake(CGRectGetMinX(self.timeLabelF), CGRectGetMaxY(self.timeLabelF)+10, headViewWidth, headViewWidth);
-        CGFloat x = self.headViewF.origin.x+self.headViewF.size.width+10;
-        CGFloat y = CGRectGetMaxY(self.timeLabelF)+10;
-        self.textBtnF = CGRectMake(x, y , self.textBtnF.size.width, self.textBtnF.size.height);
+        headviewX = padding_x;
     }
-    self.cellHeight = padding_x+self.timeLabelF.size.height;
-    self.cellHeight+= (self.textBtnF.size.height>=self.headViewF.size.height)?self.textBtnF.size.height:self.headViewF.size.height;
-    self.cellHeight+= padding_x*3;
+    _headViewF = CGRectMake(headviewX, headviewY, headviewW, headviewH);
+    
+    CGFloat textX = 0;
+    CGFloat textY = headviewY;
+    CGFloat textW = 50;
+    CGFloat textH = 50;
+    
+    NSDictionary *nameDict = @{NSFontAttributeName:kTextFont};
+    CGRect textRealSize = [self.qqmessage.text textRectWithSize:CGSizeMake(280, MAXFLOAT) attribute:nameDict];
+    
+    if(self.qqmessage.type==eBySelf)
+    {
+        textX = bScreenWidth-headviewW-padding_x-280;
+    }
+    else
+    {
+        textX = padding_x+headviewW;
+    }
+    
+    _textBtnF = CGRectMake(textX, textY, textRealSize.size.width, textRealSize.size.height);
+    
+    _cellHeight = CGRectGetMaxY(_headViewF)>=CGRectGetMaxY(_textBtnF)?CGRectGetMaxY(_headViewF):CGRectGetMaxY(_textBtnF);
     
 }
 

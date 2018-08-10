@@ -10,15 +10,16 @@
 @class QQMessage;
 @interface QQCellFrame : UITableViewCell
 
-@property (nonatomic,assign) CGRect headViewF;
-@property (nonatomic,assign) CGRect textBtnF;
-@property (nonatomic,assign) CGRect timeLabelF;
+@property (nonatomic,assign,readonly) CGRect headViewF;
+@property (nonatomic,assign,readonly) CGRect textBtnF;
+@property (nonatomic,assign,readonly) CGRect timeLabelF;
 
-@property (nonatomic,assign) CGFloat cellHeight;
+@property (nonatomic,assign,readonly) CGFloat cellHeight;
 
 @property (nonatomic,strong) QQMessage *qqmessage;
 
 + (NSArray*)qqCellFrames;
 
++ (id)cellWithTableView:(UITableView*)tableView;
 
 @end

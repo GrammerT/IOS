@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-
-
-@interface QQMessage : NSObject
-enum TextBy
+typedef enum
 {
     eBySelf,
     eByOther
-};
+}TextBy;
+
+@interface QQMessage : NSObject
+
 @property (nonatomic,copy) NSString *text;
 @property (nonatomic,copy) NSString *time;
-@property (nonatomic,assign) enum TextBy type;
+@property (nonatomic,assign) TextBy type;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
 + (instancetype)messageWithDictionary:(NSDictionary*)dict;
