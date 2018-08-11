@@ -115,14 +115,14 @@
     
     if(self.qqmessage.type==eBySelf)
     {
-        textX = bScreenWidth-headviewW-padding_x-280;
+        textX = bScreenWidth-headviewW-padding_x*2-textRealSize.size.width;
     }
     else
     {
-        textX = padding_x+headviewW;
+        textX = padding_x*2+headviewW;
     }
     
-    _textBtnF = CGRectMake(textX, textY, textRealSize.size.width, textRealSize.size.height);
+    _textBtnF = CGRectMake(textX, textY+padding_x, textRealSize.size.width, textRealSize.size.height);
     
     _cellHeight = CGRectGetMaxY(_headViewF)>=CGRectGetMaxY(_textBtnF)?CGRectGetMaxY(_headViewF):CGRectGetMaxY(_textBtnF);
     

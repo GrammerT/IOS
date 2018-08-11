@@ -54,8 +54,10 @@
     if(_msgBtn==nil)
     {
         _msgBtn = [[UIButton alloc] init];
-        _msgBtn.titleLabel.numberOfLines = 0;//! 
+        _msgBtn.titleLabel.numberOfLines = 0;//!
+        [_msgBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         _msgBtn.backgroundColor = [UIColor grayColor];
+        _msgBtn.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
         _msgBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         
         [self.contentView addSubview:_msgBtn];
@@ -78,12 +80,15 @@
     if(msg.type==eBySelf)
     {
         self.headImageView.image = [UIImage imageNamed:@"Gatsby"];
+        [self.msgBtn setBackgroundImage:[UIImage imageNamed:@"chat_send_nor"] forState:UIControlStateNormal];
     }
     else
     {
         self.headImageView.image = [UIImage imageNamed:@"Jobs"];
+        
+        [self.msgBtn setBackgroundImage:[UIImage imageNamed:@"chat_recive_nor"] forState:UIControlStateNormal];
     }
-
+    
 }
 
 - (void)awakeFromNib {
