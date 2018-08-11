@@ -26,6 +26,8 @@ static NSString *ID = @"Cell";
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.tableView registerClass:[QQCell class] forCellReuseIdentifier:ID];
+    //! CELL can't be selected.
+    self.tableView.allowsSelection = NO;
 }
 
 
