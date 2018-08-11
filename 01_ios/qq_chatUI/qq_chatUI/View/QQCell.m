@@ -77,17 +77,29 @@
     self.timeLabel.text = msg.time;
 //    self.timeLabel
     [self.msgBtn setTitle:msg.text forState:UIControlStateNormal];
+    UIImage *normal = nil;
+    if(msg.type==eBySelf)
+    {
+        normal = [UIImage imageNamed:@"chat_send_nor"];
+    }
+    else
+    {
+        normal =  [UIImage imageNamed:@"chat_recive_nor"];
+    }
+
+    CGFloat w = normal.size.width*0.5-1;
+    CGFloat h = normal.size.height*0.5-1;
+    UIImage *resizeImage = [normal resizableImageWithCapInsets:UIEdgeInsetsMake(h, w, h, w)];
     if(msg.type==eBySelf)
     {
         self.headImageView.image = [UIImage imageNamed:@"Gatsby"];
-        [self.msgBtn setBackgroundImage:[UIImage imageNamed:@"chat_send_nor"] forState:UIControlStateNormal];
     }
     else
     {
         self.headImageView.image = [UIImage imageNamed:@"Jobs"];
-        
-        [self.msgBtn setBackgroundImage:[UIImage imageNamed:@"chat_recive_nor"] forState:UIControlStateNormal];
     }
+    
+    [self.msgBtn setBackgroundImage:resizeImage forState:UIControlStateNormal];
     
 }
 
