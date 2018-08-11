@@ -112,20 +112,17 @@
     
     NSDictionary *nameDict = @{NSFontAttributeName:kTextFont};
     CGRect textRealSize = [self.qqmessage.text textRectWithSize:CGSizeMake(280, MAXFLOAT) attribute:nameDict];
-    
+    CGSize btnSize = CGSizeMake(textRealSize.size.width+40, textRealSize.size.height+40);
     if(self.qqmessage.type==eBySelf)
     {
-        textX = bScreenWidth-headviewW-padding_x*2-textRealSize.size.width;
+        textX = bScreenWidth-headviewW-padding_x*2-btnSize.width;
     }
     else
     {
         textX = padding_x*2+headviewW;
     }
-    
-    _textBtnF = CGRectMake(textX, textY+padding_x, textRealSize.size.width, textRealSize.size.height);
-    
+    _textBtnF = CGRectMake(textX, textY+padding_x, btnSize.width, btnSize.height);
     _cellHeight = CGRectGetMaxY(_headViewF)>=CGRectGetMaxY(_textBtnF)?CGRectGetMaxY(_headViewF):CGRectGetMaxY(_textBtnF);
-    
 }
 
 
