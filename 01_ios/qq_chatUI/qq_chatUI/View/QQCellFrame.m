@@ -23,8 +23,26 @@
 {
     NSMutableArray *marray = [NSMutableArray array];
     NSArray *msgArray = [QQMessage messages];
+    QQMessage *lastMsg=nil;
     for (QQMessage *msg in msgArray) {
+        
         QQCellFrame *frame = [[QQCellFrame alloc] init];
+        if(lastMsg!=nil)
+        {
+            if(lastMsg.time==msg.time)
+            {
+                lastMsg.hideTime = NO;
+                msg.hideTime = YES;
+            }
+            else
+            {
+                lastMsg = msg;
+            }
+        }
+        else
+        {
+            lastMsg = msg;
+        }
         frame.qqmessage = msg;
         [marray addObject:frame];
     }
@@ -58,7 +76,15 @@
     CGFloat timex_y=0;
     CGFloat timeWidth = bScreenWidth;
     CGFloat timeHeight = bNormalHeight;
-    _timeLabelF = CGRectMake(timex_y, timex_y, timeWidth, timeHeight);
+    if(self.qqmessage.hideTime)
+    {
+        
+    }
+    else
+    {
+        _timeLabelF = CGRectMake(timex_y, timex_y, timeWidth, timeHeight);
+        
+    }
     
     CGFloat headviewX = 0;
     CGFloat headviewY = CGRectGetMaxY(_timeLabelF);

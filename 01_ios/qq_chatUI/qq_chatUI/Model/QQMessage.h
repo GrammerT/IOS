@@ -20,6 +20,9 @@ typedef enum
 @property (nonatomic,copy) NSString *time;
 @property (nonatomic,assign) TextBy type;
 
+
+@property (nonatomic,assign) BOOL hideTime;
+
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
 + (instancetype)messageWithDictionary:(NSDictionary*)dict;
 + (NSArray*)messages;
