@@ -56,7 +56,7 @@
         _msgBtn = [[UIButton alloc] init];
         _msgBtn.titleLabel.numberOfLines = 0;//!
         [_msgBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        _msgBtn.backgroundColor = [UIColor grayColor];
+//        _msgBtn.backgroundColor = [UIColor grayColor];
         _msgBtn.contentEdgeInsets = UIEdgeInsetsMake(20, 20, 20, 20);
         _msgBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         

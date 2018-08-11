@@ -58,6 +58,7 @@
     if(cell==nil)
     {
         cell = [[QQCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1.0];
     }
     return cell;
 }
@@ -111,7 +112,7 @@
     CGFloat textH = 50;
     
     NSDictionary *nameDict = @{NSFontAttributeName:kTextFont};
-    CGRect textRealSize = [self.qqmessage.text textRectWithSize:CGSizeMake(280, MAXFLOAT) attribute:nameDict];
+    CGRect textRealSize = [self.qqmessage.text textRectWithSize:CGSizeMake(240, MAXFLOAT) attribute:nameDict];
     CGSize btnSize = CGSizeMake(textRealSize.size.width+40, textRealSize.size.height+40);
     if(self.qqmessage.type==eBySelf)
     {

@@ -54,6 +54,7 @@ static NSString *ID = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     QQCell *cell = [QQCellFrame cellWithTableView:tableView];
+    
     QQCellFrame *frame = self.cellFrames[indexPath.row];
     cell.cellFrame = frame;
     return cell;
