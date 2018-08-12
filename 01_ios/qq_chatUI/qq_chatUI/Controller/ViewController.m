@@ -29,6 +29,17 @@ static NSString *ID = @"Cell";
     //! CELL can't be selected.
     self.tableView.allowsSelection = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //! set main window attribute.
+    //! key window.
+    [UIApplication sharedApplication].keyWindow;
+    //! all windows.
+    [UIApplication sharedApplication].windows;
+    
+    //! end set
+    self.tableView.backgroundColor = [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1.0];
+//    self.tableView.backgroundColor = [UIColor redColor];
+    
+    self.view.window.backgroundColor = self.tableView.backgroundColor;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame1:) name:UIKeyboardDidHideNotification object:nil];
@@ -48,6 +59,8 @@ static NSString *ID = @"Cell";
 -(void)keyBoardDidChangedFrame:(NSNotification*)noti
 {
     NSLog(@"-----%@",noti.userInfo);
+    self.view.window.backgroundColor = self.tableView.backgroundColor;
+    
     CGRect rect = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     //! show keyboard --> view up 258
     //! hide keyboard ---> view down 258
