@@ -50,8 +50,16 @@ static NSString *ID = @"Cell";
     NSLog(@"-----%@",noti.userInfo);
     CGRect rect = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     //! show keyboard --> view up 258
-    self.view.transform = CGAffineTransformMakeTranslation(0, rect.origin.y-667);
     //! hide keyboard ---> view down 258
+    
+    CGFloat keyboardY = rect.origin.y;
+    CGFloat screeH = [[UIScreen mainScreen] bounds].size.height;
+    
+    CGFloat animationTime = [noti.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    [UIView animateWithDuration:animationTime animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(0, keyboardY-screeH);
+    }];
 }
 
 
