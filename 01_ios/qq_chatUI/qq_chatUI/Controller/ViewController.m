@@ -30,7 +30,7 @@ static NSString *ID = @"Cell";
     self.tableView.allowsSelection = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame1:) name:UIKeyboardDidHideNotification object:nil];
     
 }
