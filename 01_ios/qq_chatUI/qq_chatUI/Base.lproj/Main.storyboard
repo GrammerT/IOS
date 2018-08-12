@@ -66,6 +66,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rEF-1c-nXZ" id="7YB-x0-KGm"/>
+                        <outlet property="textFiled" destination="P6p-jX-TI1" id="WTy-4A-0Tp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYf-fy-Hrj" userLabel="First Responder" sceneMemberID="firstResponder"/>

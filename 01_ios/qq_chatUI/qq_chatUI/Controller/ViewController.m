@@ -17,6 +17,7 @@ static NSString *ID = @"Cell";
 
 @property (nonatomic,strong) NSArray *cellFrames;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *textFiled;
 
 @end
 
@@ -42,6 +43,8 @@ static NSString *ID = @"Cell";
     self.view.window.backgroundColor = self.tableView.backgroundColor;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    self.textFiled.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 15, 0)];
+    self.textFiled.leftViewMode = UITextFieldViewModeAlways;
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame1:) name:UIKeyboardDidHideNotification object:nil];
     
 }
