@@ -31,13 +31,29 @@ static NSString *ID = @"Cell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame1:) name:UIKeyboardDidHideNotification object:nil];
     
 }
+
+//! noti.userInfo
+//UIKeyboardAnimationCurveUserInfoKey = 7;
+//UIKeyboardAnimationDurationUserInfoKey = "0.25";
+//UIKeyboardBoundsUserInfoKey = "NSRect: {{0, 0}, {375, 258}}";
+//UIKeyboardCenterBeginUserInfoKey = "NSPoint: {187.5, 538}";
+//UIKeyboardCenterEndUserInfoKey = "NSPoint: {187.5, 796}";
+//UIKeyboardFrameBeginUserInfoKey = "NSRect: {{0, 409}, {375, 258}}";
+//UIKeyboardFrameEndUserInfoKey = "NSRect: {{0, 667}, {375, 258}}";
+//UIKeyboardIsLocalUserInfoKey = 1;
 
 -(void)keyBoardDidChangedFrame:(NSNotification*)noti
 {
     NSLog(@"-----%@",noti.userInfo);
+    CGRect rect = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    //! show keyboard --> view up 258
+    self.view.transform = CGAffineTransformMakeTranslation(0, rect.origin.y-667);
+    //! hide keyboard ---> view down 258
 }
+
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
