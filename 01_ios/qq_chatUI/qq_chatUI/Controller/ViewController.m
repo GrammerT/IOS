@@ -29,8 +29,20 @@ static NSString *ID = @"Cell";
     //! CELL can't be selected.
     self.tableView.allowsSelection = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidChangedFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    
 }
 
+-(void)keyBoardDidChangedFrame:(NSNotification*)noti
+{
+    NSLog(@"-----%@",noti.userInfo);
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
