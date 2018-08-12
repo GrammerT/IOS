@@ -45,18 +45,21 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="chat_bottom_smile_nor"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" background="chat_bottom_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="P6p-jX-TI1">
-                                        <rect key="frame" x="44" y="7" width="243" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="send"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKf-lw-x2v">
                                         <rect key="frame" x="331" y="0.0" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="chat_bottom_up_nor"/>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-2C-DwD">
+                                        <rect key="frame" x="54" y="7" width="227" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="o1J-bR-v8K" id="3Ic-UD-UKd"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.79357019088956016" green="0.80032981208933651" blue="0.80673170336787559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -66,7 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rEF-1c-nXZ" id="7YB-x0-KGm"/>
-                        <outlet property="textFiled" destination="P6p-jX-TI1" id="WTy-4A-0Tp"/>
+                        <outlet property="textFiled" destination="cpi-2C-DwD" id="teM-OD-G16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYf-fy-Hrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +79,6 @@
     </scenes>
     <resources>
         <image name="chat_bottom_smile_nor" width="34" height="34"/>
-        <image name="chat_bottom_textfield" width="166" height="31"/>
         <image name="chat_bottom_up_nor" width="34" height="34"/>
         <image name="chat_bottom_voice_nor" width="34" height="34"/>
     </resources>

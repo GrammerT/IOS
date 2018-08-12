@@ -13,9 +13,9 @@
 
 static NSString *ID = @"Cell";
 
-@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
-@property (nonatomic,strong) NSArray *cellFrames;
+@property (nonatomic,strong) NSMutableArray *cellFrames;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
 
@@ -78,6 +78,26 @@ static NSString *ID = @"Cell";
     }];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(textField.text);
+    
+    QQMessage *message = [[QQMessage alloc] init];
+    message.time = @"16:18";
+    message.text = textField.text;
+    message.type = eBySelf;
+    message.hideTime = NO;
+    QQCellFrame *frame = [[QQCellFrame alloc] init];
+    frame.qqmessage = message;
+    //! add frame
+    [self.cellFrames addObject:frame];
+    //! update tableview
+//    NSIndexPath *path = [[NSIndexPath alloc] initWithIndex:self.cellFrames.count];
+//    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.tableView reloadData];
+    textField.text = nil;
+    return YES;
+}
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
