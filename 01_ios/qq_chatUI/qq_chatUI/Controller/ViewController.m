@@ -91,10 +91,13 @@ static NSString *ID = @"Cell";
     frame.qqmessage = message;
     //! add frame
     [self.cellFrames addObject:frame];
+
     //! update tableview
-//    NSIndexPath *path = [[NSIndexPath alloc] initWithIndex:self.cellFrames.count];
-//    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     [self.tableView reloadData];
+    //! move tableview
+    NSIndexPath *path = [NSIndexPath indexPathForRow:self.cellFrames.count-1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+
     textField.text = nil;
     return YES;
 }
