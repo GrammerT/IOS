@@ -18,6 +18,7 @@
 		AE9EAA1F2121D0F300015E1E /* QQFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA1E2121D0F300015E1E /* QQFriend.m */; };
 		AE9EAA222121D10A00015E1E /* QQFriendGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA212121D10A00015E1E /* QQFriendGroup.m */; };
 		AE9EAA262121D1D800015E1E /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA252121D1D700015E1E /* friends.plist */; };
+		AE9EAA292123192D00015E1E /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA282123192D00015E1E /* FriendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		AE9EAA202121D10A00015E1E /* QQFriendGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQFriendGroup.h; sourceTree = "<group>"; };
 		AE9EAA212121D10A00015E1E /* QQFriendGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQFriendGroup.m; sourceTree = "<group>"; };
 		AE9EAA252121D1D700015E1E /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
+		AE9EAA272123192D00015E1E /* FriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		AE9EAA282123192D00015E1E /* FriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 				AE9EA9FA2121D0C100015E1E /* main.m */,
 				AE9EAA252121D1D700015E1E /* friends.plist */,
 				AE9EAA232121D11400015E1E /* Model */,
+				AE9EAA2A2123193200015E1E /* View */,
 			);
 			path = QQ_Friends;
 			sourceTree = "<group>";
@@ -159,6 +163,15 @@
 				AE9EA9EF2121D0BD00015E1E /* ViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE9EAA2A2123193200015E1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA272123192D00015E1E /* FriendCell.h */,
+				AE9EAA282123192D00015E1E /* FriendCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +308,7 @@
 				AE9EA9F02121D0BD00015E1E /* ViewController.m in Sources */,
 				AE9EA9FB2121D0C100015E1E /* main.m in Sources */,
 				AE9EA9ED2121D0BD00015E1E /* AppDelegate.m in Sources */,
+				AE9EAA292123192D00015E1E /* FriendCell.m in Sources */,
 				AE9EAA1F2121D0F300015E1E /* QQFriend.m in Sources */,
 				AE9EAA222121D10A00015E1E /* QQFriendGroup.m in Sources */,
 			);
