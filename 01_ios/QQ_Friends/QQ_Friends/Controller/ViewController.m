@@ -65,8 +65,14 @@
 ////! 设置行高
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-//    return ;
+//    return 44;
 //}
+
+//! 设置head的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
 
 //! 设置每个section中的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -78,7 +84,7 @@
 //! 返回head的view
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 //{
-//    
+//
 //    UIView *view = [[UIView alloc] init];
 //    view.backgroundColor = [UIColor redColor];
 //    return view;
