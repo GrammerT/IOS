@@ -10,6 +10,7 @@
 #import "QQFriendGroup.h"
 #import "QQFriend.h"
 #import "FriendCell.h"
+#import "TableHeadView.h"
 
 @interface ViewController ()
 
@@ -75,10 +76,21 @@
 }
 
 //! 返回head的view
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    return nil;
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor redColor];
+    return view;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    QQFriendGroup *group = self.friendGroups[section];
+    UITableViewHeaderFooterView *view = [tableView headerViewForSection:section];
+    view.textLabel.text = group.name;
+    return group.name;
+}
 
 
 @end

@@ -19,6 +19,7 @@
 		AE9EAA222121D10A00015E1E /* QQFriendGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA212121D10A00015E1E /* QQFriendGroup.m */; };
 		AE9EAA262121D1D800015E1E /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA252121D1D700015E1E /* friends.plist */; };
 		AE9EAA292123192D00015E1E /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA282123192D00015E1E /* FriendCell.m */; };
+		AE9EAA2D212321D400015E1E /* TableHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA2C212321D400015E1E /* TableHeadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		AE9EAA252121D1D700015E1E /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
 		AE9EAA272123192D00015E1E /* FriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		AE9EAA282123192D00015E1E /* FriendCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		AE9EAA2B212321D400015E1E /* TableHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableHeadView.h; sourceTree = "<group>"; };
+		AE9EAA2C212321D400015E1E /* TableHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableHeadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 			children = (
 				AE9EAA272123192D00015E1E /* FriendCell.h */,
 				AE9EAA282123192D00015E1E /* FriendCell.m */,
+				AE9EAA2B212321D400015E1E /* TableHeadView.h */,
+				AE9EAA2C212321D400015E1E /* TableHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			files = (
 				AE9EA9F02121D0BD00015E1E /* ViewController.m in Sources */,
 				AE9EA9FB2121D0C100015E1E /* main.m in Sources */,
+				AE9EAA2D212321D400015E1E /* TableHeadView.m in Sources */,
 				AE9EA9ED2121D0BD00015E1E /* AppDelegate.m in Sources */,
 				AE9EAA292123192D00015E1E /* FriendCell.m in Sources */,
 				AE9EAA1F2121D0F300015E1E /* QQFriend.m in Sources */,
