@@ -76,13 +76,13 @@
 }
 
 //! 返回head的view
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor redColor];
-    return view;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    
+//    UIView *view = [[UIView alloc] init];
+//    view.backgroundColor = [UIColor redColor];
+//    return view;
+//}
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
