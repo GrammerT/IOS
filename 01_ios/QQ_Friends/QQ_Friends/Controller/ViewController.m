@@ -92,5 +92,10 @@
     return group.name;
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return true;
+}
+
 
 @end
