@@ -85,6 +85,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     TableHeadView *view = [TableHeadView headviewWith:tableView];
+    view.backgroundColor = [UIColor redColor];
     return view ;
 }
 

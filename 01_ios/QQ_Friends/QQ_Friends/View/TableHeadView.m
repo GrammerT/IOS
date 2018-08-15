@@ -23,7 +23,7 @@
     TableHeadView *head = [tableview dequeueReusableHeaderFooterViewWithIdentifier:ID];
     if(head==nil)
     {
-        head = [[TableHeadView alloc] init];
+        head = [[TableHeadView alloc] initWithReuseIdentifier:ID];
     }
     return head;
 }
