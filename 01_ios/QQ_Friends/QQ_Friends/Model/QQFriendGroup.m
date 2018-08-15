@@ -12,7 +12,6 @@
 @implementation QQFriendGroup
 
 
-
 - (instancetype)initWithDictionary:(NSDictionary*)dict
 {
     self = [super init];
@@ -26,6 +25,7 @@
             [arr addObject:fri];
         }
         self.friends = arr;
+        self.open = YES;
         NSLog(@"%ld",self.friends.count);
     }
     return self;

@@ -98,6 +98,11 @@
 - (void)clickHead:(UIButton*)btn
 {
     NSLog(@"%s",__func__);
+    self.group.open=!self.group.isOpen;
+    if(self.delegate!=nil)
+    {
+        [self.delegate tableHeadview:self];
+    }
 }
 
 

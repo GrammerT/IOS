@@ -12,7 +12,7 @@
 #import "FriendCell.h"
 #import "TableHeadView.h"
 
-@interface ViewController ()
+@interface ViewController () <TableHeadViewDelegate>
 
 @property (nonatomic,strong) NSArray *friendGroups;
 
@@ -78,13 +78,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     QQFriendGroup *group = self.friendGroups[section];
-    return group.friends.count;
+    return group.isOpen?group.friends.count:0;
 }
 
 //! 返回head的view
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     TableHeadView *view = [TableHeadView headviewWith:tableView];
+    view.delegate=self;
     view.group = self.friendGroups[section];
     return view ;
 }
@@ -100,6 +101,12 @@
 - (BOOL)prefersStatusBarHidden
 {
     return true;
+}
+
+#pragma mark headview delegate
+- (void)tableHeadview:(TableHeadView *)headview
+{
+    [self.tableView reloadData];
 }
 
 

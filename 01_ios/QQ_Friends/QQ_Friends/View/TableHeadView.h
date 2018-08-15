@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 @class QQFriendGroup;
 
+@class TableHeadView;
+
+@protocol TableHeadViewDelegate <NSObject>
+- (void)tableHeadview:(TableHeadView*)headview;
+@end
+
 @interface TableHeadView : UITableViewHeaderFooterView
 
 @property (nonatomic,strong) UIButton *headBtn;
 @property (nonatomic,strong) UILabel *onlineLabel;
 @property (nonatomic,strong) QQFriendGroup *group;
+
+@property (nonatomic,strong) id<TableHeadViewDelegate> delegate;
+
 
 
 

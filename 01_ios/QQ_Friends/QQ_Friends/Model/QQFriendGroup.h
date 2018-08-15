@@ -16,6 +16,8 @@
 
 @property (nonatomic,assign) int  online;
 
+@property (nonatomic,assign,getter=isOpen) BOOL open;
+
 
 - (instancetype)initWithDictionary:(NSDictionary*)dict;
 + (instancetype)friendGroupWithDictionary:(NSDictionary*)dict;
