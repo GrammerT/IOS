@@ -17,14 +17,15 @@
     // Drawing code
 }
 */
-- (instancetype)init
++(instancetype)headviewWith:(UITableView*)tableview
 {
-    self = [super init];
-    if (self) {
-        self.headBtn;
-        self.onlineLabel;
+    static NSString *ID = @"headview";
+    TableHeadView *head = [tableview dequeueReusableHeaderFooterViewWithIdentifier:ID];
+    if(head==nil)
+    {
+        head = [[TableHeadView alloc] init];
     }
-    return self;
+    return head;
 }
 
 - (UIButton*)headBtn

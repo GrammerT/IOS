@@ -13,7 +13,7 @@
 @property (nonatomic,strong) UIButton *headBtn;
 @property (nonatomic,strong) UILabel *onlineLabel;
 
-
++(instancetype)headviewWith:(UITableView*)tableview;
 
 
 
