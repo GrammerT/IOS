@@ -11,6 +11,8 @@
 
 @class TableHeadView;
 
+typedef void (^tableheadViewblock)(id);
+
 @protocol TableHeadViewDelegate <NSObject>
 - (void)tableHeadview:(TableHeadView*)headview;
 @end
@@ -23,7 +25,7 @@
 
 @property (nonatomic,strong) id<TableHeadViewDelegate> delegate;
 
-
+@property (nonatomic,copy) tableheadViewblock block;
 
 
 +(instancetype)headviewWith:(UITableView*)tableview;

@@ -85,7 +85,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     TableHeadView *view = [TableHeadView headviewWith:tableView];
-    view.delegate=self;
+//    view.delegate=self;
+    view.block = ^(TableHeadView *view) {
+        [tableView reloadData];
+    };
     view.group = self.friendGroups[section];
     return view ;
 }

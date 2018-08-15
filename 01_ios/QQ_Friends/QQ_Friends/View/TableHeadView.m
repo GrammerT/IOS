@@ -9,6 +9,7 @@
 #import "TableHeadView.h"
 #import "QQFriendGroup.h"
 
+
 @implementation TableHeadView
 
 /*
@@ -99,9 +100,14 @@
 {
     NSLog(@"%s",__func__);
     self.group.open=!self.group.isOpen;
-    if(self.delegate!=nil)
+    //! method 1.update parent UI
+    //    if(self.delegate!=nil)
+//    {
+//        [self.delegate tableHeadview:self];
+//    }
+    if(self.block)
     {
-        [self.delegate tableHeadview:self];
+        self.block(self);
     }
 }
 
