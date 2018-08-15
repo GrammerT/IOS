@@ -105,10 +105,13 @@
 //    {
 //        [self.delegate tableHeadview:self];
 //    }
-    if(self.block)
-    {
-        self.block(self);
-    }
+    //! method 2.use block
+//    if(self.block)
+//    {
+//        self.block(self);
+//    }
+    //! method 3.use notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"friendhead_noti" object:nil];
 }
 
 

@@ -24,8 +24,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [QQFriendGroup friendGroups];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(headClick) name:@"friendhead_noti" object:nil];
 }
 
+- (void)headClick
+{
+    NSLog(@"%s",__func__);
+
+    [self.tableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
