@@ -35,7 +35,7 @@
     self.headBtn.frame = self.bounds;
     float onlineW = 75;
     float onlineH = self.bounds.size.height;
-    float onlineX =self.bounds.size.width-onlineW;
+    float onlineX =self.bounds.size.width-onlineW-10;
     float onlineY = 0;
     _onlineLabel.frame = CGRectMake(onlineX, onlineY, onlineW, onlineH);
 }
@@ -73,6 +73,8 @@
 //        _headBtn.titleLabel.ins
         _headBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _headBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        _headBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        [_headBtn addTarget:self action:@selector(clickHead:) forControlEvents:UIControlEventTouchUpInside];
 //        _headBtn.titleLabel
         [_headBtn setImage:[UIImage imageNamed:@"buddy_header_arrow"] forState:UIControlStateNormal];
     }
@@ -84,6 +86,7 @@
     if(_onlineLabel==nil)
     {
         _onlineLabel = [[UILabel alloc] init];
+        _onlineLabel.textAlignment = NSTextAlignmentRight;
         [_onlineLabel setTextColor:[UIColor blackColor]];
 //        _onlineLabel.backgroundColor = [UIColor redColor];
 
@@ -91,6 +94,11 @@
     return _onlineLabel;
 }
 
+
+- (void)clickHead:(UIButton*)btn
+{
+    NSLog(@"%s",__func__);
+}
 
 
 @end
