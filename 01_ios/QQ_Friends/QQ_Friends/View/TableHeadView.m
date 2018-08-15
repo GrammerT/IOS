@@ -72,6 +72,8 @@
         [_headBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 //        _headBtn.titleLabel.ins
         _headBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _headBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+//        _headBtn.titleLabel
         [_headBtn setImage:[UIImage imageNamed:@"buddy_header_arrow"] forState:UIControlStateNormal];
     }
     return _headBtn;
