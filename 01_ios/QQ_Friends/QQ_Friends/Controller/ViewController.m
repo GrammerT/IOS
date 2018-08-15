@@ -36,6 +36,8 @@
 
 - (void)dealloc
 {
+    //! when the process isn't ARC.must be call this func.
+//    [super dealloc];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
