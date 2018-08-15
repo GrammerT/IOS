@@ -85,7 +85,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     TableHeadView *view = [TableHeadView headviewWith:tableView];
-    view.backgroundColor = [UIColor redColor];
+    view.group = self.friendGroups[section];
     return view ;
 }
 

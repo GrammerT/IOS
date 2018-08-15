@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class QQFriendGroup;
 
 @interface TableHeadView : UITableViewHeaderFooterView
 
 @property (nonatomic,strong) UIButton *headBtn;
 @property (nonatomic,strong) UILabel *onlineLabel;
+@property (nonatomic,strong) QQFriendGroup *group;
+
+
 
 +(instancetype)headviewWith:(UITableView*)tableview;
 

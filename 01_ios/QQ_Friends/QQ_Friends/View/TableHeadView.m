@@ -7,6 +7,7 @@
 //
 
 #import "TableHeadView.h"
+#import "QQFriendGroup.h"
 
 @implementation TableHeadView
 
@@ -28,12 +29,41 @@
     return head;
 }
 
+//! when parent widget changed,subview ui
+- (void)layoutSubviews
+{
+    self.headBtn.frame = self.bounds;
+    
+}
+
+-(void)setGroup:(QQFriendGroup *)group
+{
+    _group=group;
+    [self.headBtn setTitle:_group.name forState:UIControlStateNormal];
+    [self.onlineLabel setText:[NSString stringWithFormat:@"%d/%d",_group.online,_group.friends.count]];
+}
+
+
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithReuseIdentifier:reuseIdentifier];
+    
+    if(self)
+    {
+        [self addSubview:self.headBtn];
+        [self addSubview:self.onlineLabel];
+    }
+    
+    return self;
+}
+
 - (UIButton*)headBtn
 {
     if(_headBtn==nil)
     {
-        _headBtn = [[UIButton alloc] init];
-        [self addSubview:_headBtn];
+        _headBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _headBtn.backgroundColor = [UIColor blackColor];
+        _headBtn.frame = self.bounds;
     }
     return _headBtn;
 }
@@ -43,10 +73,12 @@
     if(_onlineLabel==nil)
     {
         _onlineLabel = [[UILabel alloc] init];
-        [self addSubview:_onlineLabel];
+        _onlineLabel.backgroundColor = [UIColor redColor];
+        _onlineLabel.frame = CGRectMake(300, 0, 75, 44);
     }
     return _onlineLabel;
 }
+
 
 
 @end
