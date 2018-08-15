@@ -33,13 +33,18 @@
 - (void)layoutSubviews
 {
     self.headBtn.frame = self.bounds;
-    
+    float onlineW = 75;
+    float onlineH = self.bounds.size.height;
+    float onlineX =self.bounds.size.width-onlineW;
+    float onlineY = 0;
+    _onlineLabel.frame = CGRectMake(onlineX, onlineY, onlineW, onlineH);
 }
 
 -(void)setGroup:(QQFriendGroup *)group
 {
     _group=group;
     [self.headBtn setTitle:_group.name forState:UIControlStateNormal];
+    NSLog([NSString stringWithFormat:@"%d/%d",_group.online,_group.friends.count]);
     [self.onlineLabel setText:[NSString stringWithFormat:@"%d/%d",_group.online,_group.friends.count]];
 }
 
@@ -62,8 +67,11 @@
     if(_headBtn==nil)
     {
         _headBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _headBtn.backgroundColor = [UIColor blackColor];
+//        _headBtn.backgroundColor = [UIColor blackColor];
         _headBtn.frame = self.bounds;
+        [_headBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//        _headBtn.titleLabel.ins
+        [_headBtn setImage:[UIImage imageNamed:@"buddy_header_arrow"] forState:UIControlStateNormal];
     }
     return _headBtn;
 }
@@ -73,8 +81,9 @@
     if(_onlineLabel==nil)
     {
         _onlineLabel = [[UILabel alloc] init];
-        _onlineLabel.backgroundColor = [UIColor redColor];
-        _onlineLabel.frame = CGRectMake(300, 0, 75, 44);
+        [_onlineLabel setTextColor:[UIColor blackColor]];
+//        _onlineLabel.backgroundColor = [UIColor redColor];
+
     }
     return _onlineLabel;
 }
