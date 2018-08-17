@@ -23,7 +23,12 @@
 - (IBAction)login:(id)sender {
     if([self.accountLabel.text isEqualToString:@"grammer"]&&[self.passwordLabel.text isEqualToString:@"123"])
     {
-        [self performSegueWithIdentifier:@"login2contact" sender:nil];
+        [MBProgressHUD showMessage:@"正在登录"];
+        //! GCD
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+            [self performSegueWithIdentifier:@"login2contact" sender:nil];
+        });
     }
     else{
         [MBProgressHUD showError:@"账号或者密码错误"];
