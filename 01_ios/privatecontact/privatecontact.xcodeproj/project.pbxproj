@@ -20,6 +20,7 @@
 		AE9EAA8521270CE400015E1E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8021270CE400015E1E /* MBProgressHUD.m */; };
 		AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */; };
 		AE9EAA8721270CE400015E1E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */; };
+		AE9EAA8A212712B400015E1E /* AddUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA89212712B400015E1E /* AddUserController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		AE9EAA8221270CE400015E1E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		AE9EAA88212712B400015E1E /* AddUserController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserController.h; sourceTree = "<group>"; };
+		AE9EAA89212712B400015E1E /* AddUserController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddUserController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				AE9EAA712126FA3900015E1E /* LoginViewController.m */,
 				AE9EAA73212703FF00015E1E /* ContactViewController.h */,
 				AE9EAA74212703FF00015E1E /* ContactViewController.m */,
+				AE9EAA88212712B400015E1E /* AddUserController.h */,
+				AE9EAA89212712B400015E1E /* AddUserController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				AE9EAA75212703FF00015E1E /* ContactViewController.m in Sources */,
 				AE9EAA8521270CE400015E1E /* MBProgressHUD.m in Sources */,
+				AE9EAA8A212712B400015E1E /* AddUserController.m in Sources */,
 				AE9EAA722126FA3900015E1E /* LoginViewController.m in Sources */,
 				AE9EAA6F2126F9F700015E1E /* ViewController.m in Sources */,
 				AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */,
