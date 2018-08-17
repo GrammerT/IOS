@@ -16,7 +16,7 @@
 
 @property (nonatomic,assign) int  online;
 
-@property (nonatomic,assign,getter=isOpen) BOOL open;
+@property (nonatomic,assign) BOOL open;
 
 
 - (instancetype)initWithDictionary:(NSDictionary*)dict;

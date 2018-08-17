@@ -92,7 +92,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     QQFriendGroup *group = self.friendGroups[section];
-    return group.isOpen?group.friends.count:0;
+    return group.open?group.friends.count:0;
 }
 
 //! 返回head的view

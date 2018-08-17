@@ -96,10 +96,26 @@
 }
 
 
+- (void)didMoveToSuperview
+{
+    if(self.group.open)
+    {
+        self.headBtn.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    }
+    else
+    {
+        self.headBtn.imageView.transform = CGAffineTransformMakeRotation(0);
+    }
+}
+
+
 - (void)clickHead:(UIButton*)btn
 {
     NSLog(@"%s",__func__);
-    self.group.open=!self.group.isOpen;
+    
+    self.group.open=!self.group.open;
+//    [self didMoveToSuperview];
+//    self.headBtn.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
     //! method 1.update parent UI
     //    if(self.delegate!=nil)
 //    {

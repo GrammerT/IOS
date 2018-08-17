@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE9EAA3C2126F7B100015E1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA3B2126F7B100015E1E /* AppDelegate.m */; };
+		AE9EAA422126F7B100015E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA402126F7B100015E1E /* Main.storyboard */; };
+		AE9EAA442126F7B500015E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA432126F7B500015E1E /* Assets.xcassets */; };
+		AE9EAA472126F7B500015E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA452126F7B500015E1E /* LaunchScreen.storyboard */; };
+		AE9EAA4A2126F7B500015E1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA492126F7B500015E1E /* main.m */; };
+		AE9EAA542126F7B500015E1E /* privatecontactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA532126F7B500015E1E /* privatecontactTests.m */; };
+		AE9EAA5F2126F7B500015E1E /* privatecontactUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA5E2126F7B500015E1E /* privatecontactUITests.m */; };
+		AE9EAA6F2126F9F700015E1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA6D2126F9F700015E1E /* ViewController.m */; };
+		AE9EAA722126FA3900015E1E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA712126FA3900015E1E /* LoginViewController.m */; };
+		AE9EAA75212703FF00015E1E /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA74212703FF00015E1E /* ContactViewController.m */; };
+		AE9EAA8521270CE400015E1E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8021270CE400015E1E /* MBProgressHUD.m */; };
+		AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */; };
+		AE9EAA8721270CE400015E1E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE9EAA502126F7B500015E1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE9EAA2F2126F7B100015E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9EAA362126F7B100015E1E;
+			remoteInfo = privatecontact;
+		};
+		AE9EAA5B2126F7B500015E1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE9EAA2F2126F7B100015E1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE9EAA362126F7B100015E1E;
+			remoteInfo = privatecontact;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE9EAA372126F7B100015E1E /* privatecontact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = privatecontact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9EAA3A2126F7B100015E1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE9EAA3B2126F7B100015E1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE9EAA412126F7B100015E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE9EAA432126F7B500015E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE9EAA462126F7B500015E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE9EAA482126F7B500015E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9EAA492126F7B500015E1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE9EAA4F2126F7B500015E1E /* privatecontactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = privatecontactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9EAA532126F7B500015E1E /* privatecontactTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = privatecontactTests.m; sourceTree = "<group>"; };
+		AE9EAA552126F7B500015E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9EAA5A2126F7B500015E1E /* privatecontactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = privatecontactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9EAA5E2126F7B500015E1E /* privatecontactUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = privatecontactUITests.m; sourceTree = "<group>"; };
+		AE9EAA602126F7B500015E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9EAA6D2126F9F700015E1E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AE9EAA6E2126F9F700015E1E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AE9EAA702126FA3900015E1E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		AE9EAA712126FA3900015E1E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		AE9EAA73212703FF00015E1E /* ContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		AE9EAA74212703FF00015E1E /* ContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		AE9EAA8021270CE400015E1E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		AE9EAA8121270CE400015E1E /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		AE9EAA8221270CE400015E1E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE9EAA342126F7B100015E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA4C2126F7B500015E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA572126F7B500015E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE9EAA2E2126F7B100015E1E = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA392126F7B100015E1E /* privatecontact */,
+				AE9EAA522126F7B500015E1E /* privatecontactTests */,
+				AE9EAA5D2126F7B500015E1E /* privatecontactUITests */,
+				AE9EAA382126F7B100015E1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE9EAA382126F7B100015E1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA372126F7B100015E1E /* privatecontact.app */,
+				AE9EAA4F2126F7B500015E1E /* privatecontactTests.xctest */,
+				AE9EAA5A2126F7B500015E1E /* privatecontactUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE9EAA392126F7B100015E1E /* privatecontact */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA3A2126F7B100015E1E /* AppDelegate.h */,
+				AE9EAA3B2126F7B100015E1E /* AppDelegate.m */,
+				AE9EAA7E21270CE400015E1E /* Lib */,
+				AE9EAA6C2126F9AB00015E1E /* Controller */,
+				AE9EAA402126F7B100015E1E /* Main.storyboard */,
+				AE9EAA432126F7B500015E1E /* Assets.xcassets */,
+				AE9EAA452126F7B500015E1E /* LaunchScreen.storyboard */,
+				AE9EAA482126F7B500015E1E /* Info.plist */,
+				AE9EAA492126F7B500015E1E /* main.m */,
+			);
+			path = privatecontact;
+			sourceTree = "<group>";
+		};
+		AE9EAA522126F7B500015E1E /* privatecontactTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA532126F7B500015E1E /* privatecontactTests.m */,
+				AE9EAA552126F7B500015E1E /* Info.plist */,
+			);
+			path = privatecontactTests;
+			sourceTree = "<group>";
+		};
+		AE9EAA5D2126F7B500015E1E /* privatecontactUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA5E2126F7B500015E1E /* privatecontactUITests.m */,
+				AE9EAA602126F7B500015E1E /* Info.plist */,
+			);
+			path = privatecontactUITests;
+			sourceTree = "<group>";
+		};
+		AE9EAA6C2126F9AB00015E1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA6E2126F9F700015E1E /* ViewController.h */,
+				AE9EAA6D2126F9F700015E1E /* ViewController.m */,
+				AE9EAA702126FA3900015E1E /* LoginViewController.h */,
+				AE9EAA712126FA3900015E1E /* LoginViewController.m */,
+				AE9EAA73212703FF00015E1E /* ContactViewController.h */,
+				AE9EAA74212703FF00015E1E /* ContactViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE9EAA7E21270CE400015E1E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA7F21270CE400015E1E /* MBProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		AE9EAA7F21270CE400015E1E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA8021270CE400015E1E /* MBProgressHUD.m */,
+				AE9EAA8121270CE400015E1E /* MBProgressHUD+MJ.h */,
+				AE9EAA8221270CE400015E1E /* MBProgressHUD.h */,
+				AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */,
+				AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE9EAA362126F7B100015E1E /* privatecontact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9EAA632126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontact" */;
+			buildPhases = (
+				AE9EAA332126F7B100015E1E /* Sources */,
+				AE9EAA342126F7B100015E1E /* Frameworks */,
+				AE9EAA352126F7B100015E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = privatecontact;
+			productName = privatecontact;
+			productReference = AE9EAA372126F7B100015E1E /* privatecontact.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE9EAA4E2126F7B500015E1E /* privatecontactTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9EAA662126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontactTests" */;
+			buildPhases = (
+				AE9EAA4B2126F7B500015E1E /* Sources */,
+				AE9EAA4C2126F7B500015E1E /* Frameworks */,
+				AE9EAA4D2126F7B500015E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE9EAA512126F7B500015E1E /* PBXTargetDependency */,
+			);
+			name = privatecontactTests;
+			productName = privatecontactTests;
+			productReference = AE9EAA4F2126F7B500015E1E /* privatecontactTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE9EAA592126F7B500015E1E /* privatecontactUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9EAA692126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontactUITests" */;
+			buildPhases = (
+				AE9EAA562126F7B500015E1E /* Sources */,
+				AE9EAA572126F7B500015E1E /* Frameworks */,
+				AE9EAA582126F7B500015E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE9EAA5C2126F7B500015E1E /* PBXTargetDependency */,
+			);
+			name = privatecontactUITests;
+			productName = privatecontactUITests;
+			productReference = AE9EAA5A2126F7B500015E1E /* privatecontactUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE9EAA2F2126F7B100015E1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Grammer;
+				TargetAttributes = {
+					AE9EAA362126F7B100015E1E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					AE9EAA4E2126F7B500015E1E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AE9EAA362126F7B100015E1E;
+					};
+					AE9EAA592126F7B500015E1E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AE9EAA362126F7B100015E1E;
+					};
+				};
+			};
+			buildConfigurationList = AE9EAA322126F7B100015E1E /* Build configuration list for PBXProject "privatecontact" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE9EAA2E2126F7B100015E1E;
+			productRefGroup = AE9EAA382126F7B100015E1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE9EAA362126F7B100015E1E /* privatecontact */,
+				AE9EAA4E2126F7B500015E1E /* privatecontactTests */,
+				AE9EAA592126F7B500015E1E /* privatecontactUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE9EAA352126F7B100015E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9EAA472126F7B500015E1E /* LaunchScreen.storyboard in Resources */,
+				AE9EAA8721270CE400015E1E /* MBProgressHUD.bundle in Resources */,
+				AE9EAA442126F7B500015E1E /* Assets.xcassets in Resources */,
+				AE9EAA422126F7B100015E1E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA4D2126F7B500015E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA582126F7B500015E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE9EAA332126F7B100015E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9EAA75212703FF00015E1E /* ContactViewController.m in Sources */,
+				AE9EAA8521270CE400015E1E /* MBProgressHUD.m in Sources */,
+				AE9EAA722126FA3900015E1E /* LoginViewController.m in Sources */,
+				AE9EAA6F2126F9F700015E1E /* ViewController.m in Sources */,
+				AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */,
+				AE9EAA4A2126F7B500015E1E /* main.m in Sources */,
+				AE9EAA3C2126F7B100015E1E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA4B2126F7B500015E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9EAA542126F7B500015E1E /* privatecontactTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9EAA562126F7B500015E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9EAA5F2126F7B500015E1E /* privatecontactUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE9EAA512126F7B500015E1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9EAA362126F7B100015E1E /* privatecontact */;
+			targetProxy = AE9EAA502126F7B500015E1E /* PBXContainerItemProxy */;
+		};
+		AE9EAA5C2126F7B500015E1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE9EAA362126F7B100015E1E /* privatecontact */;
+			targetProxy = AE9EAA5B2126F7B500015E1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE9EAA402126F7B100015E1E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE9EAA412126F7B100015E1E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE9EAA452126F7B500015E1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE9EAA462126F7B500015E1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE9EAA612126F7B500015E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE9EAA622126F7B500015E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE9EAA642126F7B500015E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontact/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE9EAA652126F7B500015E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontact/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontact;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE9EAA672126F7B500015E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontactTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/privatecontact.app/privatecontact";
+			};
+			name = Debug;
+		};
+		AE9EAA682126F7B500015E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontactTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontactTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/privatecontact.app/privatecontact";
+			};
+			name = Release;
+		};
+		AE9EAA6A2126F7B500015E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontactUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = privatecontact;
+			};
+			name = Debug;
+		};
+		AE9EAA6B2126F7B500015E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = privatecontactUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Uniz.privatecontactUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = privatecontact;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE9EAA322126F7B100015E1E /* Build configuration list for PBXProject "privatecontact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9EAA612126F7B500015E1E /* Debug */,
+				AE9EAA622126F7B500015E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9EAA632126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9EAA642126F7B500015E1E /* Debug */,
+				AE9EAA652126F7B500015E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9EAA662126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontactTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9EAA672126F7B500015E1E /* Debug */,
+				AE9EAA682126F7B500015E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9EAA692126F7B500015E1E /* Build configuration list for PBXNativeTarget "privatecontactUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9EAA6A2126F7B500015E1E /* Debug */,
+				AE9EAA6B2126F7B500015E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE9EAA2F2126F7B100015E1E /* Project object */;
+}
