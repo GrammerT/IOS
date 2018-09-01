@@ -7,6 +7,7 @@
 //
 
 #import "AddUserController.h"
+#import "Contact.h"
 
 @interface AddUserController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
@@ -29,7 +30,8 @@
     //！ 添加联系人
     [self.navigationController popViewControllerAnimated:YES];
     //! 2.把文本框的内容传递给上一个控制器
-    [self.delegate addUserWithName:self.nameTextField.text andPhone:self.phoneTextField.text];
+    Contact *c = [Contact contactWithName:self.nameTextField.text phone:self.phoneTextField.text];
+    [self.delegate addUserController:self withContact:c];
 }
 
 -(void)textChanged
@@ -42,6 +44,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSString*)name
+{
+    return self.nameTextField.text;
+}
+
+
+- (NSString*)phone
+{
+    return self.phoneTextField.text;
 }
 
 /*

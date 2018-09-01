@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class ContactViewController;
+@class AddUserController;
+@class Contact;
 
 @protocol AddUserDelegate <NSObject>
 
 @required
-- (void)addUserWithName:(NSString*)name andPhone:(NSString*)phone;
+- (void)addUserController:(AddUserController*)view withContact:(Contact *)contact; 
 @end
 
 @interface AddUserController : UIViewController

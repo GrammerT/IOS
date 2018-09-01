@@ -8,6 +8,7 @@
 
 #import "ContactViewController.h"
 #import "AddUserController.h"
+#import "Contact.h"
 
 @interface ContactViewController () <AddUserDelegate>
 
@@ -15,9 +16,9 @@
 
 @implementation ContactViewController
 
-- (void)addUserWithName:(NSString *)name andPhone:(NSString *)phone
+- (void)addUserController:(AddUserController*)view withContact:(Contact *)contact;
 {
-    NSLog(@"%@--%@",name,phone);
+    NSLog(@"%@____%@",contact.name,contact.phone);
 }
 
 - (void)viewDidLoad {

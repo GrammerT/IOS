@@ -21,6 +21,7 @@
 		AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8321270CE400015E1E /* MBProgressHUD+MJ.m */; };
 		AE9EAA8721270CE400015E1E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */; };
 		AE9EAA8A212712B400015E1E /* AddUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA89212712B400015E1E /* AddUserController.m */; };
+		AE9EAA8E213AC74A00015E1E /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9EAA8D213AC74A00015E1E /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		AE9EAA88212712B400015E1E /* AddUserController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddUserController.h; sourceTree = "<group>"; };
 		AE9EAA89212712B400015E1E /* AddUserController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddUserController.m; sourceTree = "<group>"; };
+		AE9EAA8C213AC74A00015E1E /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		AE9EAA8D213AC74A00015E1E /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		AE9EAA2E2126F7B100015E1E = {
 			isa = PBXGroup;
 			children = (
+				AE9EAA8B213AC71A00015E1E /* Model */,
 				AE9EAA392126F7B100015E1E /* privatecontact */,
 				AE9EAA522126F7B500015E1E /* privatecontactTests */,
 				AE9EAA5D2126F7B500015E1E /* privatecontactUITests */,
@@ -182,6 +186,15 @@
 				AE9EAA8421270CE400015E1E /* MBProgressHUD.bundle */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		AE9EAA8B213AC71A00015E1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE9EAA8C213AC74A00015E1E /* Contact.h */,
+				AE9EAA8D213AC74A00015E1E /* Contact.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				AE9EAA6F2126F9F700015E1E /* ViewController.m in Sources */,
 				AE9EAA8621270CE400015E1E /* MBProgressHUD+MJ.m in Sources */,
 				AE9EAA4A2126F7B500015E1E /* main.m in Sources */,
+				AE9EAA8E213AC74A00015E1E /* Contact.m in Sources */,
 				AE9EAA3C2126F7B100015E1E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
