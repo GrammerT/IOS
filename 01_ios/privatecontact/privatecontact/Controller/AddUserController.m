@@ -31,7 +31,8 @@
     [self.navigationController popViewControllerAnimated:YES];
     //! 2.把文本框的内容传递给上一个控制器
     Contact *c = [Contact contactWithName:self.nameTextField.text phone:self.phoneTextField.text];
-    [self.delegate addUserController:self withContact:c];
+    if([self.delegate respondsToSelector:@selector(addUserController:withContact:)])
+        [self.delegate addUserController:self withContact:c];
 }
 
 -(void)textChanged

@@ -144,7 +144,7 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="jQm-RX-Dct"/>
                         <barButtonItem key="leftBarButtonItem" title="注销" id="QRt-Gf-5w5">
                             <connections>
-                                <action selector="logout:" destination="sRJ-lZ-dUa" id="2mO-Pq-RHm"/>
+                                <action selector="logout:" destination="sRJ-lZ-dUa" id="W1l-OA-2rd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0pA-dA-peZ">
