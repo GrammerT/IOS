@@ -17,14 +17,19 @@
 
 @implementation AddUserController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.phoneTextField addTarget:self action:@selector(textChanged) forControlEvents:UIControlEventEditingChanged];
     [self.nameTextField addTarget:self action:@selector(textChanged) forControlEvents:UIControlEventEditingChanged];
 }
+
 - (IBAction)addAction:(UIButton*)sender {
+    //！ 添加联系人
     [self.navigationController popViewControllerAnimated:YES];
+    //! 2.把文本框的内容传递给上一个控制器
+    [self.delegate addUserWithName:self.nameTextField.text andPhone:self.phoneTextField.text];
 }
 
 -(void)textChanged

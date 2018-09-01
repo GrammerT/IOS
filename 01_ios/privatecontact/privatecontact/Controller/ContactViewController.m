@@ -7,12 +7,18 @@
 //
 
 #import "ContactViewController.h"
+#import "AddUserController.h"
 
-@interface ContactViewController ()
+@interface ContactViewController () <AddUserDelegate>
 
 @end
 
 @implementation ContactViewController
+
+- (void)addUserWithName:(NSString *)name andPhone:(NSString *)phone
+{
+    NSLog(@"%@--%@",name,phone);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +28,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddUserController *controller = segue.destinationViewController;
+    controller.delegate = self;
+}
+
+- (IBAction)logout:(UIBarButtonItem *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

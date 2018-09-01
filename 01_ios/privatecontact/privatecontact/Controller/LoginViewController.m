@@ -20,6 +20,16 @@
 
 @implementation LoginViewController
 
+// 执行segue的时候，跳转之前调用
+//！一般用作一些跳转之前的准备操作
+//! 给下一个控制器传值
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"%@---%@---%@",segue.identifier,segue.sourceViewController,segue.destinationViewController);
+    UIViewController *v = segue.destinationViewController;
+    v.navigationItem.title = [NSString stringWithFormat:@"%@的联系人列表",self.accountLabel.text];
+}
+
 - (IBAction)login:(id)sender {
     if([self.accountLabel.text isEqualToString:@"grammer"]&&[self.passwordLabel.text isEqualToString:@"123"])
     {

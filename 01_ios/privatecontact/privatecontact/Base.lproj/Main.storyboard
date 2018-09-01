@@ -142,7 +142,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="联系人列表" id="7xa-BZ-4Ui">
                         <barButtonItem key="backBarButtonItem" title="返回" id="jQm-RX-Dct"/>
-                        <barButtonItem key="leftBarButtonItem" title="注销" id="QRt-Gf-5w5"/>
+                        <barButtonItem key="leftBarButtonItem" title="注销" id="QRt-Gf-5w5">
+                            <connections>
+                                <action selector="logout:" destination="sRJ-lZ-dUa" id="2mO-Pq-RHm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0pA-dA-peZ">
                             <connections>
                                 <segue destination="v2R-Se-6sI" kind="push" id="1Kh-Ph-NjH"/>
@@ -200,7 +204,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

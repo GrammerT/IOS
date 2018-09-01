@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class ContactViewController;
+
+@protocol AddUserDelegate <NSObject>
+
+@required
+- (void)addUserWithName:(NSString*)name andPhone:(NSString*)phone;
+@end
+
 @interface AddUserController : UIViewController
+
+@property (nonatomic,strong) id<AddUserDelegate> delegate;
+
 
 @end
