@@ -9,6 +9,13 @@
 #import "LoginViewController.h"
 #import "MBProgressHUD+MJ.h"
 
+#define LVAcountKey @"account"
+#define LVPasswordKey @"pwd"
+#define LVRmbPWDKey @"remeberPWD"
+#define LVAutoLoginKey @"autologin"
+
+#define PCUserDefault [NSUserDefaults standardUserDefaults]
+
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *passwordLabel;
@@ -33,10 +40,18 @@
 - (IBAction)login:(id)sender {
     if([self.accountLabel.text isEqualToString:@"grammer"]&&[self.passwordLabel.text isEqualToString:@"123"])
     {
+        //! save param
+        [PCUserDefault setObject:self.accountLabel.text forKey:LVAcountKey];
+        [PCUserDefault setObject:self.passwordLabel.text forKey:LVPasswordKey];
+        [PCUserDefault setBool:self.remeberPwdSwitch.isOn forKey:LVRmbPWDKey];
+        [PCUserDefault setBool:self.autoLoginSwitch.isOn forKey:LVAutoLoginKey];
+        [PCUserDefault synchronize];
+        
         [MBProgressHUD showMessage:@"正在登录"];
         //! GCD
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUD];
+            
             [self performSegueWithIdentifier:@"login2contact" sender:nil];
         });
     }
@@ -61,8 +76,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [self.accountLabel addTarget:self action:@selector(textchanged) forControlEvents:UIControlEventEditingChanged];
     [self.passwordLabel addTarget:self action:@selector(textchanged) forControlEvents:UIControlEventEditingChanged];
+    
+    self.accountLabel.text = [PCUserDefault objectForKey:LVAcountKey];
+    self.passwordLabel.text = [PCUserDefault objectForKey:LVPasswordKey];
+    self.remeberPwdSwitch.on = [PCUserDefault boolForKey:LVRmbPWDKey];
+    self.autoLoginSwitch.on = [PCUserDefault boolForKey:LVAutoLoginKey];
+    
+    
     [self textchanged];
 }
 
