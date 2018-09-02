@@ -11,6 +11,9 @@
 #import "Contact.h"
 #import "MBProgressHUD.h"
 
+
+#define ContactFilePath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"contact.data"]
+
 @interface ContactViewController () <AddUserDelegate>
 
 @property (nonatomic,strong) NSMutableArray *contacts;
@@ -26,7 +29,11 @@
 {
     if(_contacts==nil)
     {
-        _contacts = [NSMutableArray array];
+        _contacts = [NSKeyedUnarchiver unarchiveObjectWithFile:ContactFilePath];
+        if(_contacts==nil)
+        {
+            _contacts = [NSMutableArray array];
+        } 
     }
     return _contacts;
 }
@@ -36,7 +43,13 @@
     NSLog(@"%@____%@",contact.name,contact.phone);
     //! update this table view.
     [self.contacts addObject:contact];
+    //! 刷新表格
     [self.tableView reloadData];
+    //! 获取doc文件夹路径
+//    NSString *docpath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+//    NSString *filepath = [docpath stringByAppendingPathComponent:@"contact.data"];
+    //！对象归档
+    [NSKeyedArchiver archiveRootObject:self.contacts toFile:ContactFilePath];
 }
 - (IBAction)logout:(UIBarButtonItem *)sender {
     
